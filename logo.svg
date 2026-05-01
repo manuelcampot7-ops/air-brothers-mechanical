@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 520" aria-label="Air Brothers Mechanical">
+  <defs>
+    <style>
+      .silhouette { fill: #1E3A8A; }
+      .highlight { fill: none; stroke: #93C5FD; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+  </defs>
+
+  <!-- Left brother (with cap, facing right) -->
+  <g class="silhouette" transform="translate(40,20)">
+    <!-- head + cap -->
+    <path d="M 130 110
+             Q 130 60 165 50
+             Q 200 40 215 60
+             L 245 65
+             Q 240 95 230 105
+             Q 220 130 210 140
+             Q 195 155 175 150
+             Q 145 145 135 125 Z"/>
+    <!-- shoulders + body + arms crossed -->
+    <path d="M 100 175
+             Q 130 155 175 158
+             Q 215 162 240 175
+             L 255 200
+             Q 270 220 268 250
+             L 260 290
+             Q 265 320 270 350
+             Q 275 380 270 400
+             Q 268 430 260 455
+             L 30 455
+             Q 25 430 30 405
+             Q 35 380 38 360
+             Q 42 330 40 300
+             Q 38 270 50 240
+             Q 60 215 75 195 Z"/>
+    <!-- crossed arms detail -->
+    <path d="M 95 235
+             Q 130 245 175 242
+             Q 215 240 240 230
+             L 248 248
+             Q 230 265 200 268
+             Q 165 270 130 268
+             Q 105 263 88 252 Z"/>
+  </g>
+  <!-- Left highlights (collar + arm crease) -->
+  <g class="highlight" transform="translate(40,20)">
+    <path d="M 175 158 Q 195 175 200 198"/>
+    <path d="M 95 230 Q 130 240 175 238"/>
+    <path d="M 215 230 Q 230 245 245 250"/>
+  </g>
+
+  <!-- Right brother (no cap, facing left) -->
+  <g class="silhouette" transform="translate(560,20) scale(-1,1)">
+    <path d="M 130 105
+             Q 130 55 168 45
+             Q 210 40 230 65
+             Q 240 95 230 115
+             Q 220 138 205 148
+             Q 185 155 165 150
+             Q 138 142 130 120 Z"/>
+    <path d="M 100 175
+             Q 130 155 175 158
+             Q 215 162 240 175
+             L 255 200
+             Q 270 220 268 250
+             L 260 290
+             Q 265 320 270 350
+             Q 275 380 270 400
+             Q 268 430 260 455
+             L 30 455
+             Q 25 430 30 405
+             Q 35 380 38 360
+             Q 42 330 40 300
+             Q 38 270 50 240
+             Q 60 215 75 195 Z"/>
+    <path d="M 95 235
+             Q 130 245 175 242
+             Q 215 240 240 230
+             L 248 248
+             Q 230 265 200 268
+             Q 165 270 130 268
+             Q 105 263 88 252 Z"/>
+  </g>
+  <g class="highlight" transform="translate(560,20) scale(-1,1)">
+    <path d="M 175 158 Q 195 175 200 198"/>
+    <path d="M 95 230 Q 130 240 175 238"/>
+    <path d="M 215 230 Q 230 245 245 250"/>
+  </g>
+</svg>

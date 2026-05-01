@@ -1,0 +1,2834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Air Brothers Mechanical — HVAC, AC & Refrigeration Experts in Ocala, FL</title>
+<meta name="description" content="Locally-owned HVAC and refrigeration specialists serving Ocala and Central Florida for over 40 years. Free estimates · Licensed CAC1823749 · 24/7 emergency. Call (954) 856-8639." />
+<meta name="theme-color" content="#1E3A8A" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+<link rel="icon" href="images/logo-color.png" />
+
+<style>
+/* ================================================================
+   AIR BROTHERS MECHANICAL — Premium HVAC site
+   Palette: White + cobalt blue (matched to logo)
+==================================================================*/
+:root{
+  --white:        #ffffff;
+  --bg:           #ffffff;
+  --bg-soft:      #F8FAFC;
+  --bg-blue:      #EFF6FF;       /* very light blue tint */
+  --bg-blue-2:    #DBEAFE;
+  --cobalt:       #1E3A8A;       /* logo blue, deep */
+  --cobalt-dark:  #1E40AF;
+  --cobalt-darker:#172554;
+  --royal:        #2563EB;       /* royal blue accent */
+  --royal-bright: #3B82F6;
+  --sky:          #38BDF8;
+  --blue-pale:    #EFF6FF;
+  --blue-100:     #DBEAFE;
+  --blue-200:     #BFDBFE;
+  --blue-300:     #93C5FD;
+
+  --text:         #0F172A;
+  --text-2:       #1E293B;
+  --text-muted:   #64748B;
+  --text-soft:    #94A3B8;
+  --border:       #E2E8F0;
+  --border-strong:#CBD5E1;
+
+  --gold:         #F59E0B;
+  --green:        #10B981;
+  --red:          #EF4444;
+
+  --grad-blue:    linear-gradient(135deg, #1E3A8A 0%, #2563EB 100%);
+  --grad-blue-soft: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
+  --grad-hero:    linear-gradient(135deg, #1E3A8A 0%, #1E40AF 50%, #2563EB 100%);
+
+  --shadow-xs:    0 1px 2px rgba(15,23,42,0.05);
+  --shadow-sm:    0 4px 12px rgba(15,23,42,0.06);
+  --shadow:       0 12px 32px rgba(15,23,42,0.08);
+  --shadow-lg:    0 24px 60px rgba(15,23,42,0.12);
+  --shadow-blue:  0 16px 40px rgba(30,58,138,0.18);
+  --shadow-blue-lg: 0 30px 70px rgba(30,58,138,0.22);
+
+  --radius-sm:    8px;
+  --radius:       14px;
+  --radius-lg:    22px;
+  --radius-xl:    32px;
+
+  --ease:         cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-out:     cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{
+  font-family:'Inter',system-ui,-apple-system,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.65;
+  overflow-x:hidden;
+  font-feature-settings: "ss01", "cv11";
+}
+
+h1,h2,h3,h4{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;line-height:1.1;letter-spacing:-0.025em;color:var(--text)}
+h1{font-size:clamp(2.6rem,6.5vw,5rem);font-weight:800;letter-spacing:-0.04em}
+h2{font-size:clamp(2rem,4vw,3.4rem);font-weight:700;letter-spacing:-0.03em}
+h3{font-size:clamp(1.25rem,2vw,1.6rem);font-weight:700}
+h4{font-size:1.05rem;font-weight:700}
+p{color:var(--text-muted);font-size:1.02rem}
+a{color:inherit;text-decoration:none}
+img,svg{display:block;max-width:100%}
+
+.container{max-width:1240px;margin:0 auto;padding:0 24px}
+
+/* ================================================================
+   ANNOUNCEMENT BAR
+================================================================ */
+.announce{
+  background:var(--cobalt-darker);
+  color:#fff;
+  font-size:0.84rem;
+  font-weight:500;
+  padding:10px 0;
+  position:relative;
+  z-index:99;
+}
+.announce-inner{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.announce-left{display:flex;align-items:center;gap:24px;flex-wrap:wrap;color:rgba(255,255,255,0.85)}
+.announce-left span{display:inline-flex;align-items:center;gap:6px}
+.announce-left svg{width:14px;height:14px;color:var(--blue-300)}
+.announce-right a{display:inline-flex;align-items:center;gap:8px;color:#fff;font-weight:600;transition:color 0.2s}
+.announce-right a:hover{color:var(--blue-300)}
+.announce-right svg{width:14px;height:14px}
+@media(max-width:680px){.announce-left{font-size:0.76rem;gap:14px}}
+
+/* ================================================================
+   NAV
+================================================================ */
+.nav{
+  position:sticky;top:0;
+  background:rgba(255,255,255,0.92);
+  backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);
+  border-bottom:1px solid transparent;
+  transition:border-color 0.4s var(--ease), box-shadow 0.4s var(--ease);
+  z-index:100;
+}
+.nav.scrolled{border-bottom-color:var(--border);box-shadow:0 4px 24px rgba(15,23,42,0.04)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:14px 0}
+.brand{display:flex;align-items:center}
+.brand-logo-img{height:48px;width:auto;display:block}
+@media(max-width:540px){.brand-logo-img{height:38px}}
+
+.nav-links{display:none;gap:36px;align-items:center}
+@media(min-width:980px){.nav-links{display:flex}}
+.nav-links a{color:var(--text-2);font-size:0.95rem;font-weight:500;transition:color 0.2s;position:relative}
+.nav-links a:hover{color:var(--cobalt)}
+.nav-links a::after{content:"";position:absolute;bottom:-6px;left:0;width:0;height:2px;background:var(--cobalt);transition:width 0.3s var(--ease)}
+.nav-links a:hover::after{width:100%}
+
+.nav-cta{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:12px 22px;border-radius:50px;
+  background:var(--cobalt);color:#fff;font-weight:600;font-size:0.93rem;
+  box-shadow:var(--shadow-blue);
+  transition:all 0.3s var(--ease);
+  white-space:nowrap;
+}
+.nav-cta:hover{background:var(--royal);transform:translateY(-2px);box-shadow:var(--shadow-blue-lg)}
+.nav-cta svg{width:16px;height:16px}
+
+.menu-toggle{display:grid;place-items:center;width:42px;height:42px;border-radius:10px;background:var(--bg-blue);border:1px solid var(--border);cursor:pointer}
+.menu-toggle svg{width:22px;height:22px;color:var(--cobalt)}
+@media(min-width:980px){.menu-toggle{display:none}}
+
+/* mobile menu drawer */
+.menu-drawer{position:fixed;inset:0;background:rgba(15,23,42,0.4);opacity:0;pointer-events:none;transition:opacity 0.3s;z-index:200}
+.menu-drawer.open{opacity:1;pointer-events:auto}
+.menu-panel{position:absolute;right:0;top:0;bottom:0;width:min(320px,85vw);background:#fff;padding:28px;display:flex;flex-direction:column;gap:8px;transform:translateX(100%);transition:transform 0.4s var(--ease)}
+.menu-drawer.open .menu-panel{transform:translateX(0)}
+.menu-panel a{padding:14px 16px;border-radius:10px;font-weight:600;color:var(--text-2);transition:background 0.2s}
+.menu-panel a:hover{background:var(--bg-blue)}
+.menu-close{align-self:flex-end;width:38px;height:38px;display:grid;place-items:center;border:none;background:var(--bg-soft);border-radius:10px;cursor:pointer;margin-bottom:12px}
+.menu-close svg{width:20px;height:20px;color:var(--text-2)}
+
+/* ================================================================
+   BUTTONS
+================================================================ */
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:16px 28px;border-radius:50px;
+  font-weight:600;font-size:0.98rem;
+  transition:all 0.3s var(--ease);
+  cursor:pointer;border:none;font-family:inherit;
+  white-space:nowrap;
+}
+.btn-primary{background:var(--cobalt);color:#fff;box-shadow:var(--shadow-blue)}
+.btn-primary:hover{background:var(--royal);transform:translateY(-3px);box-shadow:var(--shadow-blue-lg)}
+.btn-outline{background:transparent;color:var(--cobalt);border:2px solid var(--border-strong)}
+.btn-outline:hover{border-color:var(--cobalt);background:var(--bg-blue);transform:translateY(-2px)}
+.btn-ghost{background:var(--bg-blue);color:var(--cobalt)}
+.btn-ghost:hover{background:var(--blue-100)}
+.btn-white{background:#fff;color:var(--cobalt);box-shadow:0 12px 32px rgba(0,0,0,0.15)}
+.btn-white:hover{transform:translateY(-3px)}
+.btn svg{width:18px;height:18px}
+.btn-sm{padding:10px 18px;font-size:0.88rem}
+
+/* ================================================================
+   HERO
+================================================================ */
+.hero{position:relative;padding:60px 0 100px;overflow:hidden}
+.hero::before{
+  content:"";position:absolute;
+  top:-100px;right:-100px;width:600px;height:600px;
+  background:radial-gradient(circle, rgba(30,58,138,0.07), transparent 60%);
+  z-index:0;
+}
+.hero::after{
+  content:"";position:absolute;
+  bottom:-120px;left:-120px;width:500px;height:500px;
+  background:radial-gradient(circle, rgba(56,189,248,0.08), transparent 65%);
+  z-index:0;
+}
+.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:center}
+@media(max-width:980px){.hero-grid{grid-template-columns:1fr;gap:48px}}
+
+.hero-badge{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:8px 16px;border-radius:50px;
+  background:var(--bg-blue);
+  border:1px solid var(--blue-200);
+  color:var(--cobalt);
+  font-size:0.85rem;font-weight:600;
+  margin-bottom:24px;
+  letter-spacing:0.01em;
+}
+.hero-badge .stars{display:flex;gap:2px}
+.hero-badge .stars svg{width:14px;height:14px;fill:var(--gold)}
+.hero h1{margin-bottom:24px}
+.hero h1 .accent{
+  position:relative;
+  background: var(--grad-blue);
+  -webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;
+  display:inline-block;
+}
+.hero h1 .accent::after{
+  content:"";position:absolute;left:0;right:0;bottom:6px;
+  height:14px;background:rgba(59,130,246,0.18);z-index:-1;border-radius:4px;
+}
+.hero-sub{font-size:clamp(1.05rem,1.4vw,1.18rem);color:var(--text-muted);max-width:540px;margin-bottom:40px;line-height:1.7}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:40px}
+.hero-trust{display:flex;align-items:center;gap:32px;flex-wrap:wrap}
+.hero-trust-item{display:flex;align-items:center;gap:10px}
+.hero-trust-icon{
+  width:38px;height:38px;border-radius:10px;background:var(--bg-blue);
+  display:grid;place-items:center;flex-shrink:0;
+}
+.hero-trust-icon svg{width:18px;height:18px;color:var(--cobalt)}
+.hero-trust-text strong{display:block;font-size:0.92rem;color:var(--text);font-weight:700;line-height:1.2}
+.hero-trust-text span{font-size:0.78rem;color:var(--text-muted)}
+
+/* Hero visual right column */
+.hero-visual{position:relative;aspect-ratio:5/6}
+.hero-card{
+  position:relative;
+  border-radius:var(--radius-xl);
+  overflow:hidden;
+  background:var(--grad-hero);
+  box-shadow:var(--shadow-blue-lg);
+  height:100%;
+  isolation:isolate;
+}
+.hero-card-img{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  z-index:0;
+}
+.hero-card::before{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg, rgba(30,58,138,0.05) 0%, rgba(30,58,138,0.55) 100%);
+  z-index:1;
+}
+.hero-card::after{
+  content:"";position:absolute;top:0;right:0;width:60%;height:60%;
+  background:radial-gradient(ellipse at top right, rgba(56,189,248,0.2), transparent 70%);
+  z-index:1;
+}
+
+.hero-tagline-card{
+  position:absolute;left:24px;right:24px;bottom:24px;
+  padding:18px 22px;background:rgba(255,255,255,0.95);
+  backdrop-filter:blur(20px);
+  border-radius:var(--radius);
+  display:flex;align-items:center;gap:14px;
+  z-index:3;box-shadow:0 8px 24px rgba(0,0,0,0.2);
+}
+.hero-tagline-card .tagline-icon{
+  width:42px;height:42px;border-radius:10px;background:var(--cobalt);
+  display:grid;place-items:center;flex-shrink:0;
+}
+.hero-tagline-card .tagline-icon svg{width:22px;height:22px;color:#fff}
+.hero-tagline-card strong{display:block;font-family:'Plus Jakarta Sans',sans-serif;font-size:0.96rem;color:var(--text);font-weight:700}
+.hero-tagline-card span{font-size:0.82rem;color:var(--text-muted)}
+
+/* Floating mini stat card */
+.hero-float-card{
+  position:absolute;top:30px;left:-30px;
+  background:#fff;border-radius:var(--radius);padding:14px 18px;
+  box-shadow:var(--shadow);display:flex;align-items:center;gap:12px;
+  z-index:4;
+  animation:floatY 4s ease-in-out infinite;
+}
+@keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.hero-float-card .float-icon{
+  width:36px;height:36px;border-radius:8px;background:var(--green);
+  display:grid;place-items:center;
+}
+.hero-float-card .float-icon svg{width:18px;height:18px;color:#fff}
+.hero-float-card strong{display:block;font-size:0.85rem;color:var(--text);font-weight:700}
+.hero-float-card span{font-size:0.74rem;color:var(--text-muted)}
+
+@media(max-width:560px){
+  .hero-float-card{display:none}
+  .hero-trust{gap:14px}
+  .hero-trust-item{flex:1 1 calc(50% - 8px)}
+}
+
+/* ================================================================
+   MARQUEE BRANDS
+================================================================ */
+.marquee{
+  padding:32px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+  background:var(--bg-soft);overflow:hidden;
+}
+.marquee-label{
+  text-align:center;font-size:0.78rem;color:var(--text-muted);
+  letter-spacing:0.18em;text-transform:uppercase;font-weight:600;margin-bottom:18px;
+}
+.marquee-track{
+  display:flex;gap:80px;animation:scroll 28s linear infinite;
+  width:max-content;
+}
+.marquee-track:hover{animation-play-state:paused}
+.marquee-item{
+  font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:1.6rem;
+  color:var(--text-soft);letter-spacing:-0.02em;
+  white-space:nowrap;
+  transition:color 0.3s;
+}
+.marquee-item:hover{color:var(--cobalt)}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ================================================================
+   SECTIONS GENERIC
+================================================================ */
+section{padding:120px 0;position:relative}
+@media(max-width:720px){section{padding:80px 0}}
+
+.section-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:6px 14px;border-radius:50px;
+  background:var(--bg-blue);border:1px solid var(--blue-200);
+  color:var(--cobalt);
+  font-size:0.78rem;font-weight:600;
+  letter-spacing:0.1em;text-transform:uppercase;
+  margin-bottom:20px;
+}
+.section-eyebrow::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--cobalt)}
+.section-title{margin-bottom:18px;max-width:760px}
+.section-sub{font-size:1.08rem;max-width:680px;margin-bottom:60px;color:var(--text-muted);line-height:1.7}
+.section-head-center{text-align:center}
+.section-head-center .section-eyebrow,.section-head-center .section-title,.section-head-center .section-sub{margin-left:auto;margin-right:auto}
+.section-head-center .section-title{text-align:center}
+
+/* ================================================================
+   STATS BIG
+================================================================ */
+.stats{padding:80px 0;background:var(--bg-soft)}
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;text-align:center}
+.stat-big{padding:32px 16px;border-right:1px solid var(--border)}
+.stat-big:last-child{border-right:none}
+@media(max-width:720px){.stat-big{border-right:none;border-bottom:1px solid var(--border);padding:24px}.stat-big:last-child{border-bottom:none}}
+.stat-num{
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-size:clamp(2.6rem,4.5vw,3.6rem);font-weight:800;line-height:1;
+  background:var(--grad-blue);
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+  margin-bottom:8px;
+  letter-spacing:-0.04em;
+}
+.stat-label{color:var(--text-muted);font-size:0.92rem;font-weight:500;text-transform:uppercase;letter-spacing:0.06em}
+.stat-sub{font-size:0.82rem;color:var(--text-soft);margin-top:4px}
+
+/* ================================================================
+   SERVICES — premium cards with image
+================================================================ */
+.services-grid{
+  display:grid;grid-template-columns:repeat(2,1fr);gap:28px;
+}
+@media(max-width:720px){.services-grid{grid-template-columns:1fr}}
+
+.service-card{
+  position:relative;
+  border-radius:var(--radius-lg);
+  background:#fff;
+  border:1px solid var(--border);
+  overflow:hidden;
+  transition:all 0.5s var(--ease);
+  display:flex;flex-direction:column;
+}
+.service-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-blue);border-color:var(--blue-200)}
+
+.service-image{
+  position:relative;height:240px;overflow:hidden;
+  background:var(--grad-blue);
+}
+.service-image::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 50%,rgba(30,58,138,0.4));
+}
+.service-image img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform 1.2s var(--ease);
+}
+.service-card:hover .service-image img{transform:scale(1.08)}
+.service-image-placeholder{
+  position:absolute;inset:0;
+  display:grid;place-items:center;
+  color:rgba(255,255,255,0.9);
+}
+.service-image-placeholder svg{width:84px;height:84px;opacity:0.85}
+.service-tag{
+  position:absolute;top:18px;left:18px;
+  padding:6px 12px;border-radius:50px;
+  background:rgba(255,255,255,0.95);
+  color:var(--cobalt);font-size:0.74rem;font-weight:700;
+  letter-spacing:0.06em;text-transform:uppercase;
+  z-index:2;
+}
+
+.service-body{padding:30px 28px;display:flex;flex-direction:column;flex:1}
+.service-body h3{margin-bottom:10px}
+.service-body > p{color:var(--text-muted);margin-bottom:18px;font-size:0.98rem}
+.service-features{list-style:none;margin-bottom:24px}
+.service-features li{
+  display:flex;align-items:flex-start;gap:10px;
+  padding:5px 0;font-size:0.92rem;color:var(--text-2);
+}
+.service-features svg{width:16px;height:16px;color:var(--green);flex-shrink:0;margin-top:4px}
+.service-foot{
+  display:flex;align-items:center;justify-content:space-between;
+  padding-top:20px;border-top:1px solid var(--border);margin-top:auto;
+}
+.service-link{
+  display:inline-flex;align-items:center;gap:6px;
+  color:var(--cobalt);font-weight:600;font-size:0.92rem;
+  transition:gap 0.3s var(--ease);
+}
+.service-card:hover .service-link{gap:12px}
+.service-link svg{width:16px;height:16px}
+.service-price{font-size:0.84rem;color:var(--text-muted)}
+.service-price strong{color:var(--text);font-size:1.05rem;font-family:'Plus Jakarta Sans',sans-serif}
+
+/* ================================================================
+   PROCESS TIMELINE
+================================================================ */
+.process{background:var(--bg-soft);position:relative}
+.process::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:1px;background:var(--border);
+}
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;position:relative}
+@media(max-width:980px){.process-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:540px){.process-grid{grid-template-columns:1fr}}
+
+.process-step{
+  position:relative;padding:32px 24px;
+  background:#fff;border-radius:var(--radius-lg);border:1px solid var(--border);
+  transition:all 0.4s var(--ease);
+}
+.process-step:hover{transform:translateY(-4px);border-color:var(--cobalt);box-shadow:var(--shadow-blue)}
+.process-num{
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-size:3rem;font-weight:800;line-height:1;
+  color:var(--blue-100);margin-bottom:14px;
+  letter-spacing:-0.04em;
+  transition:color 0.3s;
+}
+.process-step:hover .process-num{color:var(--cobalt)}
+.process-step h4{margin-bottom:8px;font-size:1.1rem}
+.process-step p{font-size:0.92rem}
+.process-icon{
+  width:40px;height:40px;border-radius:10px;background:var(--bg-blue);
+  display:grid;place-items:center;margin-bottom:18px;
+}
+.process-icon svg{width:20px;height:20px;color:var(--cobalt)}
+
+/* ================================================================
+   WHY US — split with logo art
+================================================================ */
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+@media(max-width:980px){.why-grid{grid-template-columns:1fr;gap:48px}}
+
+.why-art{
+  position:relative;aspect-ratio:1;
+  border-radius:var(--radius-xl);
+  background:var(--grad-blue-soft);
+  display:grid;place-items:center;
+  overflow:hidden;
+  border:1px solid var(--blue-100);
+  box-shadow:var(--shadow);
+}
+.why-art::before{
+  content:"";position:absolute;top:-50px;right:-50px;
+  width:300px;height:300px;border-radius:50%;
+  background:radial-gradient(circle, rgba(30,58,138,0.08), transparent 70%);
+}
+.why-art-logo{padding:14%;width:100%;z-index:1}
+.why-art-logo svg{width:100%;height:auto}
+.why-art-photo{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;
+  transition:transform 8s ease;
+}
+.why-art:hover .why-art-photo{transform:scale(1.04)}
+.why-art:has(.why-art-photo)::before{display:none}
+.why-art-corner-tag{
+  position:absolute;top:24px;left:24px;
+  padding:8px 14px;border-radius:50px;
+  background:#fff;border:1px solid var(--border);
+  font-size:0.78rem;font-weight:700;color:var(--cobalt);
+  letter-spacing:0.08em;text-transform:uppercase;
+  display:flex;align-items:center;gap:8px;
+  box-shadow:var(--shadow-sm);
+  z-index:2;
+}
+.why-art-corner-tag::before{content:"";width:8px;height:8px;background:var(--green);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.5;transform:scale(1.2)}}
+
+.why-art-bottom-card{
+  position:absolute;left:24px;right:24px;bottom:24px;
+  padding:18px 22px;background:#fff;border-radius:var(--radius);
+  display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:center;
+  border:1px solid var(--border);
+  box-shadow:var(--shadow);
+  z-index:2;
+}
+.why-art-bottom-card .num{font-family:'Plus Jakarta Sans',sans-serif;font-size:2.2rem;font-weight:800;color:var(--cobalt);line-height:1;letter-spacing:-0.04em}
+.why-art-bottom-card strong{font-size:0.92rem;color:var(--text);font-weight:700}
+.why-art-bottom-card span{font-size:0.8rem;color:var(--text-muted);display:block}
+
+.why-list{display:flex;flex-direction:column;gap:18px;margin-top:32px}
+.why-feature{
+  display:flex;gap:18px;align-items:flex-start;
+  padding:22px 24px;border-radius:var(--radius);
+  background:#fff;border:1px solid var(--border);
+  transition:all 0.3s var(--ease);
+}
+.why-feature:hover{border-color:var(--cobalt);transform:translateX(6px);box-shadow:var(--shadow-sm)}
+.why-feature-icon{
+  width:44px;height:44px;border-radius:10px;background:var(--cobalt);
+  display:grid;place-items:center;flex-shrink:0;
+}
+.why-feature-icon svg{width:22px;height:22px;color:#fff}
+.why-feature h4{margin-bottom:4px}
+.why-feature p{font-size:0.92rem;margin:0}
+
+/* ================================================================
+   GALLERY (real work)
+================================================================ */
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  grid-auto-rows:200px;
+  gap:14px;
+  margin-top:48px;
+}
+@media(max-width:720px){.gallery-grid{grid-template-columns:repeat(2,1fr)}}
+
+.gallery-item{
+  position:relative;border-radius:var(--radius);overflow:hidden;
+  cursor:pointer;background:var(--cobalt);
+  transition:all 0.4s var(--ease);
+}
+.gallery-item:hover{transform:translateY(-4px);box-shadow:var(--shadow-blue)}
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform 0.8s var(--ease)}
+.gallery-item:hover img{transform:scale(1.06)}
+.gallery-item.tall{grid-row:span 2}
+.gallery-item.wide{grid-column:span 2}
+.gallery-overlay{
+  position:absolute;inset:0;display:flex;align-items:flex-end;
+  padding:16px 18px;
+  background:linear-gradient(180deg,transparent 60%,rgba(30,58,138,0.85));
+  color:#fff;font-weight:600;font-size:0.92rem;
+  opacity:0;transition:opacity 0.3s;
+}
+.gallery-item:hover .gallery-overlay{opacity:1}
+.gallery-placeholder{
+  position:absolute;inset:0;display:grid;place-items:center;
+  background:var(--grad-blue);color:rgba(255,255,255,0.85);
+}
+.gallery-placeholder svg{width:60px;height:60px}
+
+/* ================================================================
+   QUOTE ESTIMATOR
+================================================================ */
+.estimator{background:var(--cobalt-darker);color:#fff;position:relative;overflow:hidden}
+.estimator::before{
+  content:"";position:absolute;top:-150px;right:-150px;
+  width:500px;height:500px;border-radius:50%;
+  background:radial-gradient(circle,rgba(56,189,248,0.18),transparent 60%);
+}
+.estimator::after{
+  content:"";position:absolute;bottom:-100px;left:-100px;
+  width:400px;height:400px;border-radius:50%;
+  background:radial-gradient(circle,rgba(37,99,235,0.18),transparent 60%);
+}
+.estimator .container{position:relative;z-index:1}
+.estimator .section-eyebrow{background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.2);color:var(--blue-300)}
+.estimator h2,.estimator h3{color:#fff}
+.estimator .section-sub{color:rgba(255,255,255,0.8)}
+
+.est-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:64px;align-items:center}
+@media(max-width:980px){.est-grid{grid-template-columns:1fr;gap:48px}}
+
+.est-card{
+  background:#fff;color:var(--text);
+  padding:36px;border-radius:var(--radius-lg);
+  box-shadow:var(--shadow-blue-lg);
+}
+.est-step-label{
+  font-size:0.76rem;color:var(--cobalt);font-weight:700;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:8px;
+  display:flex;justify-content:space-between;align-items:center;
+}
+.est-step-label .step-counter{color:var(--text-soft);font-weight:600}
+.est-question{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.4rem;font-weight:700;margin-bottom:24px;color:var(--text)}
+
+.est-options{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+@media(max-width:480px){.est-options{grid-template-columns:1fr}}
+.est-option{
+  padding:18px 20px;border-radius:12px;
+  background:var(--bg-soft);
+  border:2px solid var(--border);
+  cursor:pointer;
+  transition:all 0.25s var(--ease);
+  text-align:left;font-family:inherit;font-size:0.95rem;color:var(--text-2);font-weight:500;
+  display:flex;align-items:center;gap:12px;
+}
+.est-option:hover{border-color:var(--blue-200);background:var(--bg-blue)}
+.est-option.selected{border-color:var(--cobalt);background:var(--bg-blue);color:var(--cobalt);font-weight:600}
+.est-option-icon{
+  width:30px;height:30px;border-radius:8px;background:#fff;border:1px solid var(--border);
+  display:grid;place-items:center;flex-shrink:0;
+}
+.est-option-icon svg{width:16px;height:16px;color:var(--cobalt)}
+.est-option.selected .est-option-icon{background:var(--cobalt);border-color:var(--cobalt)}
+.est-option.selected .est-option-icon svg{color:#fff}
+
+.est-progress{display:flex;gap:6px;margin-top:28px}
+.est-progress-bar{flex:1;height:4px;background:var(--border);border-radius:4px;overflow:hidden}
+.est-progress-bar.active{background:var(--cobalt)}
+
+.est-nav{display:flex;justify-content:space-between;gap:12px;margin-top:24px}
+.est-back{background:transparent;border:none;color:var(--text-muted);cursor:pointer;font-weight:600;font-size:0.92rem;display:inline-flex;align-items:center;gap:6px;padding:10px}
+.est-back:disabled{opacity:0;pointer-events:none}
+.est-back svg{width:14px;height:14px}
+
+.est-result{display:none;text-align:center;padding:20px 10px}
+.est-result.active{display:block}
+.est-result .price-tag{font-family:'Plus Jakarta Sans',sans-serif;font-size:3.2rem;font-weight:800;color:var(--cobalt);line-height:1;margin-bottom:6px;letter-spacing:-0.04em}
+.est-result .price-sub{color:var(--text-muted);font-size:0.92rem;margin-bottom:24px}
+.est-result .est-cta-row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:14px}
+.est-result .restart-link{display:block;font-size:0.84rem;color:var(--text-muted);margin-top:18px;cursor:pointer;text-decoration:underline}
+
+.est-side h2{margin-bottom:18px}
+.est-side ul{list-style:none;margin-top:24px;display:flex;flex-direction:column;gap:14px}
+.est-side ul li{display:flex;gap:12px;color:rgba(255,255,255,0.9);font-size:0.96rem}
+.est-side ul li svg{width:22px;height:22px;color:var(--blue-300);flex-shrink:0}
+
+/* ================================================================
+   AREAS WITH MAP
+================================================================ */
+.areas-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+@media(max-width:980px){.areas-grid{grid-template-columns:1fr}}
+
+.areas-tags{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:24px}
+.area-pill{
+  padding:14px 18px;background:#fff;border:1px solid var(--border);border-radius:12px;
+  display:flex;align-items:center;gap:10px;
+  font-weight:500;font-size:0.94rem;color:var(--text-2);
+  transition:all 0.25s var(--ease);
+}
+.area-pill:hover{border-color:var(--cobalt);transform:translateX(4px);background:var(--bg-blue)}
+.area-pill svg{width:16px;height:16px;color:var(--cobalt)}
+.area-pill.highlight{background:var(--cobalt);color:#fff;border-color:var(--cobalt)}
+.area-pill.highlight svg{color:#fff}
+
+.area-map{
+  position:relative;aspect-ratio:1;
+  border-radius:var(--radius-xl);
+  background:var(--bg-blue);border:1px solid var(--blue-100);
+  overflow:hidden;
+}
+.area-map svg{width:100%;height:100%}
+.area-pin{animation:pinPulse 3s ease-in-out infinite}
+@keyframes pinPulse{0%,100%{opacity:1}50%{opacity:0.6}}
+
+/* ================================================================
+   REVIEWS
+================================================================ */
+.reviews{background:var(--bg-soft)}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+@media(max-width:980px){.reviews-grid{grid-template-columns:1fr}}
+
+.review-card{
+  padding:32px;border-radius:var(--radius-lg);
+  background:#fff;border:1px solid var(--border);
+  position:relative;
+  transition:all 0.4s var(--ease);
+}
+.review-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:var(--blue-200)}
+.review-stars{display:flex;gap:2px;margin-bottom:16px}
+.review-stars svg{width:18px;height:18px;fill:var(--gold)}
+.review-card blockquote{
+  font-size:1.02rem;line-height:1.7;color:var(--text-2);margin-bottom:24px;
+  font-weight:500;
+}
+.review-author{display:flex;align-items:center;gap:14px;padding-top:20px;border-top:1px solid var(--border)}
+.review-avatar{
+  width:46px;height:46px;border-radius:50%;
+  background:var(--cobalt);color:#fff;
+  display:grid;place-items:center;
+  font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:1rem;
+  flex-shrink:0;
+}
+.review-name{font-weight:700;font-size:0.96rem;color:var(--text)}
+.review-loc{font-size:0.82rem;color:var(--text-muted)}
+.review-source{margin-left:auto;font-size:0.74rem;color:var(--text-soft);font-weight:600;text-transform:uppercase;letter-spacing:0.08em}
+.review-quote-mark{
+  position:absolute;top:24px;right:28px;
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-size:5rem;font-weight:800;
+  color:var(--bg-blue-2);
+  line-height:1;
+  pointer-events:none;
+}
+
+/* ================================================================
+   FAQ
+================================================================ */
+.faq-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:64px;align-items:start}
+@media(max-width:980px){.faq-grid{grid-template-columns:1fr;gap:32px}}
+
+.faq-side .btn{margin-top:20px}
+
+.faq-list{display:flex;flex-direction:column;gap:10px}
+.faq-item{
+  border:1px solid var(--border);border-radius:var(--radius);
+  background:#fff;overflow:hidden;
+  transition:all 0.3s var(--ease);
+}
+.faq-item.open{border-color:var(--cobalt);box-shadow:var(--shadow-sm)}
+.faq-q{
+  display:flex;align-items:center;justify-content:space-between;gap:18px;
+  padding:22px 26px;cursor:pointer;
+  font-family:'Plus Jakarta Sans',sans-serif;font-size:1.02rem;font-weight:600;color:var(--text);
+  transition:background 0.2s;
+}
+.faq-q:hover{background:var(--bg-blue)}
+.faq-q-icon{
+  width:30px;height:30px;border-radius:50%;background:var(--bg-blue);
+  display:grid;place-items:center;flex-shrink:0;
+  transition:all 0.3s var(--ease);
+}
+.faq-item.open .faq-q-icon{background:var(--cobalt);transform:rotate(45deg)}
+.faq-q-icon svg{width:14px;height:14px;color:var(--cobalt);transition:color 0.3s}
+.faq-item.open .faq-q-icon svg{color:#fff}
+.faq-a{
+  max-height:0;overflow:hidden;
+  transition:max-height 0.4s var(--ease), padding 0.4s var(--ease);
+  padding:0 26px;
+}
+.faq-item.open .faq-a{max-height:500px;padding:0 26px 22px}
+.faq-a p{color:var(--text-muted);line-height:1.7;font-size:0.96rem}
+
+/* ================================================================
+   FINAL CTA
+================================================================ */
+.cta-final{
+  padding:100px 0;background:var(--grad-hero);color:#fff;position:relative;overflow:hidden;
+}
+.cta-final::before{
+  content:"";position:absolute;inset:0;
+  background-image:
+    radial-gradient(circle at 30% 20%, rgba(56,189,248,0.2), transparent 40%),
+    radial-gradient(circle at 80% 80%, rgba(255,255,255,0.06), transparent 50%);
+}
+.cta-final::after{
+  content:"";position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,0.04) 1px,transparent 1px);
+  background-size:48px 48px;
+  mask-image:radial-gradient(ellipse at center,black 30%,transparent 80%);
+}
+.cta-final .container{position:relative;z-index:1;text-align:center}
+.cta-final h2{color:#fff;margin-bottom:18px;font-size:clamp(2.2rem,5vw,3.8rem)}
+.cta-final p{color:rgba(255,255,255,0.85);font-size:1.15rem;max-width:580px;margin:0 auto 36px}
+.cta-final .btn-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+/* ================================================================
+   CONTACT
+================================================================ */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+@media(max-width:980px){.contact-grid{grid-template-columns:1fr}}
+
+.contact-info{display:flex;flex-direction:column;gap:14px}
+.contact-card{
+  display:flex;align-items:center;gap:16px;
+  padding:22px 24px;border-radius:var(--radius);
+  background:#fff;border:1px solid var(--border);
+  transition:all 0.3s var(--ease);
+}
+.contact-card:hover{border-color:var(--cobalt);transform:translateX(4px);box-shadow:var(--shadow-sm)}
+.contact-icon{
+  width:48px;height:48px;border-radius:12px;background:var(--cobalt);
+  display:grid;place-items:center;flex-shrink:0;
+}
+.contact-icon svg{width:22px;height:22px;color:#fff}
+.contact-icon.alt{background:var(--bg-blue)}
+.contact-icon.alt svg{color:var(--cobalt)}
+.contact-label{font-size:0.78rem;color:var(--text-muted);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:2px;font-weight:600}
+.contact-value{font-weight:700;font-size:1.02rem;display:block;color:var(--text)}
+.contact-value.small{font-size:0.95rem}
+
+.form{
+  padding:36px;border-radius:var(--radius-lg);
+  background:#fff;border:1px solid var(--border);
+  box-shadow:var(--shadow-sm);
+}
+.form h3{font-family:'Plus Jakarta Sans',sans-serif;margin-bottom:8px;color:var(--text)}
+.form > p{color:var(--text-muted);font-size:0.94rem;margin-bottom:24px}
+.field{margin-bottom:16px}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:480px){.field-row{grid-template-columns:1fr}}
+.field label{display:block;font-size:0.82rem;color:var(--text-2);margin-bottom:8px;font-weight:600}
+.field input,.field select,.field textarea{
+  width:100%;padding:14px 16px;
+  background:var(--bg-soft);
+  border:1.5px solid var(--border);
+  border-radius:10px;
+  color:var(--text);font-family:inherit;font-size:0.96rem;
+  transition:all 0.25s ease;
+}
+.field input:focus,.field select:focus,.field textarea:focus{
+  outline:none;border-color:var(--cobalt);background:#fff;box-shadow:0 0 0 4px rgba(30,58,138,0.08);
+}
+.field textarea{resize:vertical;min-height:110px}
+.form .btn{width:100%;justify-content:center}
+.form-note{font-size:0.78rem;color:var(--text-muted);text-align:center;margin-top:14px;display:flex;align-items:center;gap:6px;justify-content:center}
+.form-note svg{width:14px;height:14px;color:var(--green)}
+
+/* ================================================================
+   FOOTER
+================================================================ */
+footer{
+  padding:80px 0 40px;background:var(--cobalt-darker);color:rgba(255,255,255,0.85);
+}
+.footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:48px;margin-bottom:60px}
+@media(max-width:980px){.footer-grid{grid-template-columns:1fr 1fr;gap:36px}}
+@media(max-width:560px){.footer-grid{grid-template-columns:1fr}}
+.footer-brand{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.footer-brand .brand-logo svg .silhouette{fill:#fff !important}
+.footer-brand .brand-logo svg .highlight{stroke:rgba(147,197,253,0.7) !important}
+.footer-brand strong{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;color:#fff;font-size:1.1rem}
+.footer-brand span{font-size:0.76rem;color:rgba(255,255,255,0.6);letter-spacing:0.1em;text-transform:uppercase}
+.footer-about p{font-size:0.94rem;color:rgba(255,255,255,0.7);max-width:340px;margin-bottom:24px}
+.footer-badges{display:flex;flex-wrap:wrap;gap:8px}
+.footer-badge{
+  padding:6px 12px;border-radius:50px;
+  background:rgba(255,255,255,0.08);
+  font-size:0.74rem;font-weight:600;
+  color:rgba(255,255,255,0.85);
+  display:inline-flex;align-items:center;gap:6px;
+}
+.footer-badge svg{width:12px;height:12px;color:var(--blue-300)}
+
+footer h4{font-family:'Plus Jakarta Sans',sans-serif;font-size:0.86rem;text-transform:uppercase;letter-spacing:0.12em;color:rgba(255,255,255,0.6);margin-bottom:18px;font-weight:600}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:10px}
+.footer-links a{color:rgba(255,255,255,0.85);font-size:0.92rem;transition:color 0.25s}
+.footer-links a:hover{color:var(--blue-300)}
+.footer-bottom{
+  padding-top:28px;border-top:1px solid rgba(255,255,255,0.1);
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;
+  font-size:0.84rem;color:rgba(255,255,255,0.5);
+}
+.footer-social{display:flex;gap:10px}
+.footer-social a{
+  width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,0.08);
+  display:grid;place-items:center;
+  transition:all 0.3s;
+}
+.footer-social a:hover{background:var(--royal);transform:translateY(-2px)}
+.footer-social svg{width:16px;height:16px;color:#fff}
+
+/* ================================================================
+   STICKY MOBILE CTA
+================================================================ */
+.mobile-cta-bar{
+  position:fixed;bottom:0;left:0;right:0;
+  background:#fff;padding:12px 16px;
+  border-top:1px solid var(--border);
+  display:none;
+  z-index:80;
+  box-shadow:0 -4px 20px rgba(0,0,0,0.08);
+}
+@media(max-width:720px){.mobile-cta-bar{display:flex;gap:10px}}
+.mobile-cta-bar a{flex:1;justify-content:center;padding:14px 18px}
+
+/* ================================================================
+   FUTURISTIC ORB — bottom right, click for quick actions
+================================================================ */
+.orb-wrap{
+  position:fixed;bottom:28px;right:28px;
+  width:78px;height:78px;
+  z-index:90;
+  pointer-events:none;
+  opacity:0;transform:translateY(20px);
+  transition:opacity 0.7s var(--ease), transform 0.7s var(--ease);
+}
+.orb-wrap.visible{opacity:1;pointer-events:auto;transform:translateY(0)}
+@media(max-width:720px){.orb-wrap{bottom:88px;right:18px}}
+
+/* Outer aura — soft atmospheric glow */
+.orb-aura{
+  position:absolute;top:50%;left:50%;
+  width:170px;height:170px;
+  margin:-85px 0 0 -85px;
+  border-radius:50%;
+  background:radial-gradient(circle, rgba(56,189,248,0.28) 0%, rgba(37,99,235,0.16) 22%, rgba(30,58,138,0.08) 45%, transparent 68%);
+  filter:blur(16px);
+  animation:orbAuraShift 7s ease-in-out infinite;
+  pointer-events:none;
+}
+@keyframes orbAuraShift{
+  0%,100%{transform:scale(1);opacity:0.85}
+  50%{transform:scale(1.15);opacity:1}
+}
+
+/* Inner halo — close glow giving glass feel */
+.orb-halo{
+  position:absolute;top:50%;left:50%;
+  width:110px;height:110px;
+  margin:-55px 0 0 -55px;
+  border-radius:50%;
+  background:radial-gradient(circle, rgba(147,197,253,0.32) 0%, rgba(59,130,246,0.14) 45%, transparent 75%);
+  filter:blur(7px);
+  mix-blend-mode:screen;
+  animation:orbHaloBreathe 5.5s ease-in-out infinite;
+  pointer-events:none;
+}
+@keyframes orbHaloBreathe{
+  0%,100%{transform:scale(1);opacity:0.8}
+  50%{transform:scale(1.08);opacity:1}
+}
+
+/* Main orb button */
+.orb-btn{
+  position:relative;
+  width:78px;height:78px;
+  border-radius:50%;
+  border:none;cursor:pointer;
+  display:grid;place-items:center;
+  overflow:hidden;
+  background: radial-gradient(circle at 32% 26%, #2563EB 0%, #1E3A8A 50%, #172554 90%);
+  box-shadow:
+    0 18px 48px rgba(15,23,42,0.35),
+    0 0 32px rgba(59,130,246,0.45),
+    0 0 72px rgba(37,99,235,0.25),
+    inset 0 1px 0 rgba(255,255,255,0.4),
+    inset 0 0 26px rgba(30,58,138,0.4);
+  transition:transform 0.5s var(--ease), box-shadow 0.5s var(--ease);
+  animation:orbEntrance 0.9s var(--ease-out);
+}
+@keyframes orbEntrance{
+  from{transform:scale(0.4);opacity:0}
+  to{transform:scale(1);opacity:1}
+}
+.orb-btn:hover{
+  transform:scale(1.08);
+  box-shadow:
+    0 22px 56px rgba(15,23,42,0.5),
+    0 0 40px rgba(59,130,246,0.6),
+    0 0 90px rgba(37,99,235,0.35),
+    inset 0 1px 0 rgba(255,255,255,0.5),
+    inset 0 0 30px rgba(30,58,138,0.5);
+}
+.orb-wrap.open .orb-btn{transform:scale(0.9)}
+
+/* Plasma swirl layer */
+.orb-plasma{
+  position:absolute;inset:3px;border-radius:50%;
+  background:conic-gradient(from 0deg,
+    rgba(37,99,235,0.55),
+    rgba(59,130,246,0.7),
+    rgba(96,165,250,0.5),
+    rgba(147,197,253,0.65),
+    rgba(37,99,235,0.5),
+    rgba(37,99,235,0.55));
+  filter:blur(7px);
+  animation:orbSwirl 9s linear infinite;
+  opacity:0.85;
+  pointer-events:none;
+}
+@keyframes orbSwirl{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+
+/* Counter-rotating bright streaks */
+.orb-streaks{
+  position:absolute;inset:5px;border-radius:50%;
+  background:conic-gradient(from 180deg,
+    transparent 0deg,
+    rgba(191,219,254,0.5) 30deg,
+    transparent 70deg,
+    transparent 180deg,
+    rgba(147,197,253,0.45) 210deg,
+    transparent 250deg);
+  filter:blur(5px);
+  mix-blend-mode:screen;
+  animation:orbCounter 12s linear infinite;
+  pointer-events:none;
+}
+@keyframes orbCounter{from{transform:rotate(0)}to{transform:rotate(-360deg)}}
+
+/* Top-left highlight (glass illusion) */
+.orb-highlight{
+  position:absolute;inset:2px;border-radius:50%;
+  background:radial-gradient(ellipse 55% 38% at 28% 18%, rgba(255,255,255,0.85) 0%, rgba(219,234,254,0.45) 22%, transparent 78%);
+  mix-blend-mode:screen;
+  pointer-events:none;
+}
+
+/* Bottom-right reflection */
+.orb-reflection{
+  position:absolute;inset:3px;border-radius:50%;
+  background:radial-gradient(ellipse 40% 22% at 72% 82%, rgba(147,197,253,0.4) 0%, rgba(96,165,250,0.14) 35%, transparent 65%);
+  mix-blend-mode:screen;
+  filter:blur(2px);
+  pointer-events:none;
+}
+
+/* Particles — synapses */
+.orb-particle{
+  position:absolute;border-radius:50%;
+  background:rgba(219,234,254,1);
+  box-shadow:0 0 6px rgba(147,197,253,0.9), 0 0 12px rgba(96,165,250,0.5);
+  pointer-events:none;
+}
+@keyframes orbParticleFire{
+  0%,100%{opacity:0.3;transform:scale(0.7)}
+  50%{opacity:1;transform:scale(1.3)}
+}
+
+/* Center iris (the "eye") */
+.orb-iris{
+  position:relative;z-index:2;
+  width:34px;height:34px;
+  display:grid;place-items:center;
+}
+.orb-iris-ring{
+  position:absolute;width:30px;height:30px;border-radius:50%;
+  border:1.5px solid rgba(191,219,254,0.75);
+  box-shadow:0 0 10px rgba(147,197,253,0.7), inset 0 0 8px rgba(219,234,254,0.5);
+  animation:orbIrisBreathe 3.4s ease-in-out infinite;
+}
+.orb-iris-ring-inner{
+  position:absolute;width:16px;height:16px;border-radius:50%;
+  border:1px solid rgba(219,234,254,0.95);
+  box-shadow:0 0 8px rgba(219,234,254,0.8);
+  animation:orbIrisBreathe 2.6s ease-in-out infinite reverse;
+}
+.orb-pupil{
+  position:absolute;width:6px;height:6px;border-radius:50%;
+  background:radial-gradient(circle, #fff 0%, #DBEAFE 45%, #93C5FD 100%);
+  box-shadow:0 0 10px #fff, 0 0 18px rgba(147,197,253,0.85), 0 0 28px rgba(59,130,246,0.5);
+  animation:orbPupilPulse 2.6s ease-in-out infinite;
+}
+@keyframes orbIrisBreathe{
+  0%,100%{transform:scale(1);opacity:0.85}
+  50%{transform:scale(1.1);opacity:1}
+}
+@keyframes orbPupilPulse{
+  0%,100%{transform:scale(1)}
+  50%{transform:scale(1.2)}
+}
+.orb-wrap.open .orb-pupil{transform:scale(0)}
+.orb-wrap.open .orb-iris-ring{opacity:0}
+.orb-wrap.open .orb-iris-ring-inner{opacity:0}
+
+/* Close X icon (shown when open) */
+.orb-close-icon{
+  position:absolute;
+  width:24px;height:24px;
+  opacity:0;
+  transition:opacity 0.3s ease;
+  z-index:3;
+}
+.orb-wrap.open .orb-close-icon{opacity:1}
+.orb-close-icon svg{width:100%;height:100%;color:#fff}
+
+/* Label above orb */
+.orb-label{
+  position:absolute;
+  bottom:calc(100% + 10px);
+  left:50%;transform:translateX(-50%);
+  white-space:nowrap;
+  padding:6px 14px;border-radius:50px;
+  background:#1E3A8A;color:#fff;
+  font-size:0.75rem;font-weight:600;
+  letter-spacing:0.06em;text-transform:uppercase;
+  box-shadow:0 4px 14px rgba(30,58,138,0.4);
+  opacity:0;transition:opacity 0.4s var(--ease);
+  pointer-events:none;
+}
+.orb-label::after{
+  content:"";position:absolute;
+  bottom:-4px;left:50%;transform:translateX(-50%) rotate(45deg);
+  width:8px;height:8px;background:#1E3A8A;
+}
+.orb-wrap:not(.open) .orb-btn:hover ~ .orb-label,
+.orb-wrap.show-label .orb-label{opacity:1}
+
+/* Quick actions menu — radial fan */
+.orb-menu{
+  position:absolute;bottom:0;right:0;
+  width:78px;height:78px;
+  pointer-events:none;
+}
+.orb-action{
+  position:absolute;
+  bottom:0;right:0;
+  width:54px;height:54px;
+  border-radius:50%;
+  background:#fff;
+  border:1px solid var(--border);
+  display:grid;place-items:center;
+  text-decoration:none;
+  box-shadow:0 8px 22px rgba(15,23,42,0.15);
+  opacity:0;
+  transform:translate(0,0) scale(0.4);
+  transition:opacity 0.45s var(--ease), transform 0.55s var(--ease), background 0.25s ease;
+  pointer-events:auto;
+}
+.orb-action svg{width:22px;height:22px;color:var(--cobalt);transition:color 0.25s ease}
+.orb-action:hover{background:var(--cobalt);transform:translate(var(--tx),var(--ty)) scale(1.08) !important;box-shadow:0 12px 28px rgba(30,58,138,0.4)}
+.orb-action:hover svg{color:#fff}
+
+.orb-wrap.open .orb-action{
+  opacity:1;
+  transform:translate(var(--tx), var(--ty)) scale(1);
+}
+.orb-wrap.open .orb-action:nth-child(1){transition-delay:0.05s}
+.orb-wrap.open .orb-action:nth-child(2){transition-delay:0.12s}
+.orb-wrap.open .orb-action:nth-child(3){transition-delay:0.19s}
+.orb-wrap.open .orb-action:nth-child(4){transition-delay:0.26s}
+
+/* Tooltip on each action */
+.orb-action::before{
+  content:attr(data-label);
+  position:absolute;
+  right:calc(100% + 12px);top:50%;transform:translateY(-50%);
+  background:#0F172A;color:#fff;
+  padding:6px 12px;border-radius:8px;
+  font-size:0.78rem;font-weight:600;
+  white-space:nowrap;
+  opacity:0;pointer-events:none;
+  transition:opacity 0.2s ease;
+}
+.orb-action:hover::before{opacity:1}
+
+/* ================================================================
+   REVEAL ANIMATIONS
+================================================================ */
+.reveal{opacity:0;transform:translateY(40px);transition:opacity 0.9s var(--ease-out),transform 0.9s var(--ease-out)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-stagger > *{opacity:0;transform:translateY(30px);transition:opacity 0.7s var(--ease-out),transform 0.7s var(--ease-out)}
+.reveal-stagger.visible > *:nth-child(1){transition-delay:0.05s}
+.reveal-stagger.visible > *:nth-child(2){transition-delay:0.12s}
+.reveal-stagger.visible > *:nth-child(3){transition-delay:0.19s}
+.reveal-stagger.visible > *:nth-child(4){transition-delay:0.26s}
+.reveal-stagger.visible > *:nth-child(5){transition-delay:0.33s}
+.reveal-stagger.visible > *:nth-child(6){transition-delay:0.4s}
+.reveal-stagger.visible > *{opacity:1;transform:translateY(0)}
+
+@media (prefers-reduced-motion: reduce){
+  *{animation-duration:0.01ms !important;transition-duration:0.01ms !important}
+  .reveal,.reveal-stagger > *{opacity:1;transform:none}
+}
+
+/* Image fallback gradient */
+.img-fallback{
+  background:var(--grad-blue);
+  display:grid;place-items:center;
+  width:100%;height:100%;
+}
+.img-fallback svg{width:60px;height:60px;color:rgba(255,255,255,0.85)}
+
+/* ================================================================
+   ENHANCED EFFECTS — added in v3
+================================================================ */
+
+/* Scroll progress bar at top */
+.scroll-progress{
+  position:fixed;top:0;left:0;right:0;height:3px;
+  z-index:101;
+  background:transparent;
+  pointer-events:none;
+}
+.scroll-progress-fill{
+  height:100%;
+  background:linear-gradient(90deg, var(--cobalt) 0%, var(--royal) 50%, var(--sky) 100%);
+  width:0%;
+  transition:width 0.1s ease-out;
+  box-shadow:0 0 10px rgba(59,130,246,0.5);
+}
+
+/* Animated hero mesh background */
+.hero{position:relative}
+.hero-mesh{
+  position:absolute;inset:0;z-index:0;
+  pointer-events:none;
+  overflow:hidden;
+}
+.hero-mesh-blob{
+  position:absolute;
+  border-radius:50%;
+  filter:blur(70px);
+  mix-blend-mode:multiply;
+  animation:meshFloat 18s ease-in-out infinite;
+  opacity:0.4;
+}
+.hero-mesh-blob:nth-child(1){
+  top:-50px;right:10%;width:400px;height:400px;
+  background:#3B82F6;animation-delay:0s;
+}
+.hero-mesh-blob:nth-child(2){
+  bottom:-100px;left:5%;width:500px;height:500px;
+  background:#1E3A8A;animation-delay:-6s;
+}
+.hero-mesh-blob:nth-child(3){
+  top:30%;left:50%;width:300px;height:300px;
+  background:#93C5FD;animation-delay:-12s;
+  opacity:0.3;
+}
+@keyframes meshFloat{
+  0%,100%{transform:translate(0,0) scale(1)}
+  33%{transform:translate(40px,-30px) scale(1.05)}
+  66%{transform:translate(-30px,40px) scale(0.95)}
+}
+
+/* Hero card parallax tilt (drives via JS variables --rx --ry --tx --ty) */
+.hero-visual{
+  perspective:1200px;
+  perspective-origin:center;
+}
+.hero-card{
+  transform-style:preserve-3d;
+  transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) translate3d(var(--tx, 0px), var(--ty, 0px), 0);
+  transition:transform 0.18s var(--ease-out);
+  will-change:transform;
+}
+.hero-card-img{
+  transform: translateZ(20px) scale(1.05);
+}
+.hero-tagline-card,.hero-float-card{
+  transform: translateZ(40px);
+}
+
+/* Service card 3D tilt */
+.service-card{
+  perspective:1000px;
+  transform-style:preserve-3d;
+}
+.service-card .service-image{
+  transition:transform 0.6s var(--ease-out);
+  transform-style:preserve-3d;
+}
+.service-card:hover .service-image{
+  transform:translateZ(20px);
+}
+.service-image::before{
+  content:"";position:absolute;inset:0;z-index:1;
+  background:linear-gradient(135deg, rgba(59,130,246,0) 0%, rgba(59,130,246,0.15) 100%);
+  opacity:0;transition:opacity 0.5s var(--ease-out);
+  pointer-events:none;
+}
+.service-card:hover .service-image::before{opacity:1}
+
+/* Magnetic CTA — Primary buttons get a subtle pulse glow */
+.btn-primary{
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+}
+.btn-primary::before{
+  content:"";position:absolute;
+  top:50%;left:50%;
+  width:0;height:0;
+  border-radius:50%;
+  background:rgba(255,255,255,0.3);
+  transform:translate(-50%,-50%);
+  transition:width 0.6s var(--ease-out), height 0.6s var(--ease-out);
+  z-index:-1;
+}
+.btn-primary:hover::before{width:300px;height:300px}
+
+/* Marquee with mask edges (fade left+right) */
+.marquee{
+  -webkit-mask-image:linear-gradient(90deg, transparent 0%, black 8%, black 92%, transparent 100%);
+  mask-image:linear-gradient(90deg, transparent 0%, black 8%, black 92%, transparent 100%);
+}
+.marquee-item{
+  position:relative;
+  transition:color 0.3s, transform 0.3s var(--ease-out), text-shadow 0.3s;
+}
+.marquee-item:hover{
+  color:var(--cobalt);
+  transform:scale(1.1);
+  text-shadow:0 6px 16px rgba(30,58,138,0.18);
+}
+
+/* Gallery enhanced hover — desaturate others, highlight one */
+.gallery-grid:hover .gallery-item:not(:hover){
+  filter:saturate(0.6) brightness(0.85);
+  opacity:0.7;
+}
+.gallery-item{
+  transition:filter 0.5s var(--ease-out), opacity 0.5s var(--ease-out), transform 0.5s var(--ease-out), box-shadow 0.5s var(--ease-out);
+}
+.gallery-item:hover{
+  filter:saturate(1.1) brightness(1.05);
+  opacity:1;
+  z-index:2;
+  box-shadow:0 24px 48px rgba(15,23,42,0.25);
+}
+.gallery-item img{
+  transition:transform 1.2s var(--ease-out), filter 0.5s ease;
+}
+.gallery-item:hover img{transform:scale(1.12)}
+
+/* Stats — subtle hover lift */
+.stat-big{transition:transform 0.4s var(--ease-out)}
+.stat-big:hover{transform:translateY(-4px)}
+.stat-big:hover .stat-num{
+  filter:drop-shadow(0 8px 18px rgba(30,58,138,0.25));
+}
+
+/* Service card hover lift extended */
+.service-card{
+  transition:all 0.5s var(--ease-out);
+}
+.service-card:hover{
+  border-color:var(--blue-200);
+  box-shadow:
+    0 24px 56px rgba(15,23,42,0.1),
+    0 12px 24px rgba(30,58,138,0.08);
+}
+
+/* Process step number animates on hover */
+.process-num{
+  transition:color 0.3s, transform 0.4s var(--ease-out), text-shadow 0.4s;
+}
+.process-step:hover .process-num{
+  color:var(--cobalt);
+  transform:scale(1.08);
+  text-shadow:0 8px 18px rgba(30,58,138,0.18);
+}
+
+/* Why feature shimmer on hover */
+.why-feature{position:relative;overflow:hidden}
+.why-feature::after{
+  content:"";position:absolute;
+  top:0;left:-100%;
+  width:100%;height:100%;
+  background:linear-gradient(90deg, transparent, rgba(59,130,246,0.08), transparent);
+  transition:left 0.8s var(--ease-out);
+}
+.why-feature:hover::after{left:100%}
+
+/* Area pill ripple */
+.area-pill{position:relative;overflow:hidden}
+.area-pill::before{
+  content:"";position:absolute;
+  top:50%;left:50%;
+  width:0;height:0;
+  border-radius:50%;
+  background:rgba(30,58,138,0.06);
+  transform:translate(-50%,-50%);
+  transition:width 0.5s var(--ease-out), height 0.5s var(--ease-out);
+}
+.area-pill:hover::before{width:200px;height:200px}
+
+/* FAQ smoother arrows */
+.faq-q-icon svg{transition:transform 0.4s var(--ease-out)}
+.faq-item:hover:not(.open) .faq-q-icon{background:var(--blue-100)}
+
+/* Cursor glow tracker — subtle light following cursor in hero */
+.cursor-glow{
+  position:fixed;top:0;left:0;
+  width:300px;height:300px;border-radius:50%;
+  background:radial-gradient(circle, rgba(59,130,246,0.12), transparent 70%);
+  pointer-events:none;
+  transform:translate(-50%,-50%);
+  z-index:1;
+  opacity:0;
+  transition:opacity 0.4s var(--ease);
+  mix-blend-mode:multiply;
+  filter:blur(20px);
+}
+.cursor-glow.active{opacity:1}
+
+/* Reveal: scale + fade variant for hero items */
+.reveal-scale{
+  opacity:0;transform:scale(0.96);
+  transition:opacity 0.9s var(--ease-out), transform 0.9s var(--ease-out);
+}
+.reveal-scale.visible{opacity:1;transform:scale(1)}
+
+/* Smooth scroll-into-view fade-up that uses transform3d for buttery anim */
+.reveal,.reveal-stagger > *{
+  will-change:opacity,transform;
+}
+
+/* CTA banner final — animated gradient shift */
+.cta-final{
+  background-size:200% 200%;
+  animation:ctaGradient 12s ease-in-out infinite;
+}
+@keyframes ctaGradient{
+  0%,100%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+}
+
+/* Hero h1 reveal — letter-by-letter shimmer wash */
+.hero h1 .accent{
+  background-size:200% 200%;
+  animation:accentShimmer 6s ease-in-out infinite;
+}
+@keyframes accentShimmer{
+  0%,100%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+}
+
+/* Soft float for hero tagline mini-card */
+.hero-tagline-card{animation:taglineFloat 5s ease-in-out infinite}
+@keyframes taglineFloat{
+  0%,100%{transform:translateZ(40px) translateY(0)}
+  50%{transform:translateZ(40px) translateY(-4px)}
+}
+
+/* Logo nav micro-interaction — subtle scale on hover */
+.brand-logo-img{transition:transform 0.4s var(--ease-out), filter 0.3s}
+.brand:hover .brand-logo-img{transform:scale(1.04);filter:drop-shadow(0 4px 12px rgba(30,58,138,0.18))}
+
+/* Button row entrance stagger when revealed */
+.btn{position:relative}
+.btn-primary svg, .btn-outline svg{transition:transform 0.3s var(--ease-out)}
+.btn-primary:hover svg, .btn-outline:hover svg{transform:translateX(3px)}
+
+/* Form field focus glow ring */
+.field input:focus, .field select:focus, .field textarea:focus{
+  box-shadow:0 0 0 4px rgba(30,58,138,0.1), 0 0 24px rgba(59,130,246,0.06);
+}
+
+/* Section dividers — subtle wave between sections */
+.section-divider{
+  height:1px;
+  background:linear-gradient(90deg, transparent, var(--border), transparent);
+  margin:0 auto;max-width:80%;
+}
+
+/* Trust item icon — pulse on hover */
+.trust-item{transition:transform 0.3s var(--ease-out)}
+.trust-item:hover{transform:translateY(-3px)}
+.trust-item:hover .trust-icon{
+  background:var(--cobalt);transition:background 0.3s;
+}
+.trust-item:hover .trust-icon svg{color:#fff;transition:color 0.3s}
+
+/* Hero trust mini-cards */
+.hero-trust-item{transition:transform 0.3s var(--ease-out)}
+.hero-trust-item:hover{transform:translateY(-2px)}
+.hero-trust-item:hover .hero-trust-icon{background:var(--cobalt)}
+.hero-trust-item:hover .hero-trust-icon svg{color:#fff}
+.hero-trust-icon, .hero-trust-icon svg{transition:all 0.3s ease}
+
+/* Available indicator — pulsing green dot in nav announce */
+.live-dot{
+  display:inline-block;width:8px;height:8px;border-radius:50%;
+  background:#10B981;
+  box-shadow:0 0 0 0 rgba(16,185,129,0.6);
+  animation:livePulse 2s infinite;
+  margin-right:6px;vertical-align:middle;
+}
+@keyframes livePulse{
+  0%{box-shadow:0 0 0 0 rgba(16,185,129,0.7)}
+  70%{box-shadow:0 0 0 8px rgba(16,185,129,0)}
+  100%{box-shadow:0 0 0 0 rgba(16,185,129,0)}
+}
+</style>
+</head>
+<body>
+
+<!-- Inline SVG logo definition (reusable via use href="#abLogo") -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="abLogo" viewBox="0 0 600 520">
+      <g class="silhouette">
+        <g transform="translate(40,20)">
+          <path d="M 130 110 Q 130 60 165 50 Q 200 40 215 60 L 245 65 Q 240 95 230 105 Q 220 130 210 140 Q 195 155 175 150 Q 145 145 135 125 Z"/>
+          <path d="M 100 175 Q 130 155 175 158 Q 215 162 240 175 L 255 200 Q 270 220 268 250 L 260 290 Q 265 320 270 350 Q 275 380 270 400 Q 268 430 260 455 L 30 455 Q 25 430 30 405 Q 35 380 38 360 Q 42 330 40 300 Q 38 270 50 240 Q 60 215 75 195 Z"/>
+          <path d="M 95 235 Q 130 245 175 242 Q 215 240 240 230 L 248 248 Q 230 265 200 268 Q 165 270 130 268 Q 105 263 88 252 Z"/>
+        </g>
+        <g transform="translate(560,20) scale(-1,1)">
+          <path d="M 130 105 Q 130 55 168 45 Q 210 40 230 65 Q 240 95 230 115 Q 220 138 205 148 Q 185 155 165 150 Q 138 142 130 120 Z"/>
+          <path d="M 100 175 Q 130 155 175 158 Q 215 162 240 175 L 255 200 Q 270 220 268 250 L 260 290 Q 265 320 270 350 Q 275 380 270 400 Q 268 430 260 455 L 30 455 Q 25 430 30 405 Q 35 380 38 360 Q 42 330 40 300 Q 38 270 50 240 Q 60 215 75 195 Z"/>
+          <path d="M 95 235 Q 130 245 175 242 Q 215 240 240 230 L 248 248 Q 230 265 200 268 Q 165 270 130 268 Q 105 263 88 252 Z"/>
+        </g>
+      </g>
+      <g class="highlight" fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+        <g transform="translate(40,20)">
+          <path d="M 175 158 Q 195 175 200 198"/>
+          <path d="M 95 230 Q 130 240 175 238"/>
+          <path d="M 215 230 Q 230 245 245 250"/>
+        </g>
+        <g transform="translate(560,20) scale(-1,1)">
+          <path d="M 175 158 Q 195 175 200 198"/>
+          <path d="M 95 230 Q 130 240 175 238"/>
+          <path d="M 215 230 Q 230 245 245 250"/>
+        </g>
+      </g>
+      <style>
+        #abLogo .silhouette{fill:#1E3A8A}
+        #abLogo .highlight{stroke:#93C5FD}
+      </style>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- Scroll progress bar -->
+<div class="scroll-progress"><div class="scroll-progress-fill" id="scrollProgress"></div></div>
+
+<!-- Cursor glow tracker -->
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- ================ ANNOUNCEMENT BAR ================ -->
+<div class="announce">
+  <div class="container announce-inner">
+    <div class="announce-left">
+      <span><span class="live-dot"></span>Available now · responding within 1 hr</span>
+      <span><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg> Licensed CAC1823749</span>
+      <span><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg> 24/7 Emergency</span>
+    </div>
+    <div class="announce-right">
+      <a href="tel:+19548568639">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg>
+        (954) 856-8639
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ================ NAV ================ -->
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="#top" class="brand">
+      <img src="images/logo-color.png" alt="Air Brothers Mechanical" class="brand-logo-img" />
+    </a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#process">Our Process</a>
+      <a href="#why">Why Us</a>
+      <a href="#estimate">Get Estimate</a>
+      <a href="#areas">Areas</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a href="tel:+19548568639" class="nav-cta">
+      <svg fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg>
+      <span>Call now</span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12"/></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- mobile drawer -->
+<div class="menu-drawer" id="menuDrawer">
+  <div class="menu-panel">
+    <button class="menu-close" id="menuClose" aria-label="Close menu">
+      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/></svg>
+    </button>
+    <a href="#services" class="menu-link">Services</a>
+    <a href="#process" class="menu-link">Our Process</a>
+    <a href="#why" class="menu-link">Why Us</a>
+    <a href="#estimate" class="menu-link">Get Estimate</a>
+    <a href="#gallery" class="menu-link">Our Work</a>
+    <a href="#areas" class="menu-link">Service Areas</a>
+    <a href="#faq" class="menu-link">FAQ</a>
+    <a href="#contact" class="menu-link">Contact</a>
+  </div>
+</div>
+
+<!-- ================ HERO ================ -->
+<header class="hero" id="top">
+  <div class="hero-mesh">
+    <div class="hero-mesh-blob"></div>
+    <div class="hero-mesh-blob"></div>
+    <div class="hero-mesh-blob"></div>
+  </div>
+  <div class="container hero-grid">
+    <div class="hero-text">
+      <div class="hero-badge">
+        <div class="stars">
+          <svg viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        </div>
+        Trusted by 500+ families across Central FL
+      </div>
+
+      <h1>Cool comfort starts<br/>with the <span class="accent">Brothers</span>.</h1>
+
+      <p class="hero-sub">
+        Air Brothers Mechanical is the family-owned HVAC and refrigeration team Ocala has trusted for four decades. Honest pricing. Premium installs. Service that treats your home like ours.
+      </p>
+
+      <div class="hero-cta">
+        <a href="#estimate" class="btn btn-primary">
+          Get a free estimate
+          <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
+        </a>
+        <a href="tel:+19548568639" class="btn btn-outline">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg>
+          (954) 856-8639
+        </a>
+      </div>
+
+      <div class="hero-trust">
+        <div class="hero-trust-item">
+          <div class="hero-trust-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg></div>
+          <div class="hero-trust-text"><strong>FL Licensed</strong><span>CAC1823749</span></div>
+        </div>
+        <div class="hero-trust-item">
+          <div class="hero-trust-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg></div>
+          <div class="hero-trust-text"><strong>40+ Years</strong><span>Experience</span></div>
+        </div>
+        <div class="hero-trust-item">
+          <div class="hero-trust-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941"/></svg></div>
+          <div class="hero-trust-text"><strong>Top 27%</strong><span>Of FL contractors</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-card">
+        <img class="hero-card-img" src="images/work-1.jpg" alt="Air Brothers technician installing an indoor AC unit" loading="eager"/>
+        <div class="hero-tagline-card">
+          <div class="tagline-icon">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-6.336l-3.276 3.277a3.004 3.004 0 0 1-2.25-2.25l3.276-3.276a4.5 4.5 0 0 0-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437 1.745-1.437"/></svg>
+          </div>
+          <div>
+            <strong>Family-owned since '85</strong>
+            <span>Two brothers. One promise.</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-float-card">
+        <div class="float-icon">
+          <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+        </div>
+        <div>
+          <strong>Same-day service</strong>
+          <span>Most repairs</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ================ MARQUEE BRANDS ================ -->
+<div class="marquee">
+  <div class="container marquee-label">We install &amp; service the industry's best</div>
+  <div class="marquee-track">
+    <span class="marquee-item">TRANE</span>
+    <span class="marquee-item">DAIKIN</span>
+    <span class="marquee-item">CARRIER</span>
+    <span class="marquee-item">RHEEM</span>
+    <span class="marquee-item">RUUD</span>
+    <span class="marquee-item">GOODMAN</span>
+    <span class="marquee-item">RUNTRU</span>
+    <span class="marquee-item">LENNOX</span>
+    <!-- duplicate for seamless loop -->
+    <span class="marquee-item">TRANE</span>
+    <span class="marquee-item">DAIKIN</span>
+    <span class="marquee-item">CARRIER</span>
+    <span class="marquee-item">RHEEM</span>
+    <span class="marquee-item">RUUD</span>
+    <span class="marquee-item">GOODMAN</span>
+    <span class="marquee-item">RUNTRU</span>
+    <span class="marquee-item">LENNOX</span>
+  </div>
+</div>
+
+<!-- ================ STATS ================ -->
+<section class="stats">
+  <div class="container">
+    <div class="stats-grid reveal-stagger">
+      <div class="stat-big">
+        <div class="stat-num" data-count="40" data-suffix="+">0</div>
+        <div class="stat-label">Years experience</div>
+        <div class="stat-sub">Since 1985</div>
+      </div>
+      <div class="stat-big">
+        <div class="stat-num" data-count="500" data-suffix="+">0</div>
+        <div class="stat-label">Systems installed</div>
+        <div class="stat-sub">Across Central FL</div>
+      </div>
+      <div class="stat-big">
+        <div class="stat-num" data-count="98" data-suffix="%">0</div>
+        <div class="stat-label">Customer satisfaction</div>
+        <div class="stat-sub">Verified reviews</div>
+      </div>
+      <div class="stat-big">
+        <div class="stat-num">24<span style="font-size:0.65em;opacity:0.7">/</span>7</div>
+        <div class="stat-label">Emergency response</div>
+        <div class="stat-sub">365 days a year</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================ SERVICES ================ -->
+<section id="services">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-eyebrow">What we do</span>
+      <h2 class="section-title">From quiet whisper-cool homes to bustling commercial kitchens.</h2>
+      <p class="section-sub">Whatever the season, we keep your space at the perfect temperature. Every install is sized properly, every repair is tested, and every job is backed by a real warranty.</p>
+    </div>
+
+    <div class="services-grid reveal-stagger">
+
+      <div class="service-card">
+        <div class="service-image">
+          <span class="service-tag">Most popular</span>
+          <img src="images/work-4.jpg" alt="HVAC technician installing outdoor AC unit" loading="lazy"/>
+        </div>
+        <div class="service-body">
+          <h3>HVAC Installation</h3>
+          <p>New systems sized properly the first time. Residential or commercial — done by the book and built to last.</p>
+          <ul class="service-features">
+            <li><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>Central AC, heat pumps & mini-splits</li>
+            <li><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>Premium &amp; budget brands available</li>
+            <li><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>Up to 12-year manufacturer warranty</li>
+          </ul>
+          <div class="service-foot">
+            <a href="#estimate" class="service-link">Get an estimate <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg></a>
+            <div class="service-price">From <strong>$3,800</strong></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-image">
+          <span class="service-tag">Same-day</span>
+          <img src="images/work-2.jpg" alt="Technician repairing AC for happy customer" loading="lazy"/>
+        </div>
+        <div class="service-body">
+          <h3>AC &amp; Heat Repair</h3>
+          <p>Fast, honest diagnostics. We fix the actual problem — no upselling, no surprises on the invoice.</p>
+          <ul class="service-features">
+            <li><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>Same-day service available</li>
+            <li><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>All makes &amp; models</li>
+            <li><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>Refrigerant, leaks, electrical &amp; controls</li>
+          </ul>
+          <div class="service-foot">
+            <a href="tel:+19548568639" class="service-link">Call for service <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg></a>
+            <div class="service-price">Diagnostic <strong>$89</strong></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-image">
+          <span class="service-tag">Save up to 30%</span>
+          <img src="images/work-3.jpg" alt="HVAC technician performing maintenance" loading="lazy"/>
+        </div>
+        <div class="service-body">
+          <h3>Preventative Maintenance</h3>
+          <p>Routine care that keeps efficiency up, bills down, and equipment running for years longer.</p>
+          <ul class="service-features">
+            <li><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>Spring &amp; fall tune-ups</li>
+            <li><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>Filter, coil, &amp; drain cleaning</li>
+            <li><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>Discount maintenance plans</li>
+          </ul>
+          <div class="service-foot">
+            <a href="#estimate" class="service-link">Plan options <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg></a>
+            <div class="service-price">From <strong>$149/yr</strong></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-image">
+          <span class="service-tag">Commercial</span>
+          <img src="images/work-5.jpg" alt="HVAC professional outdoor unit work" loading="lazy"/>
+        </div>
+        <div class="service-body">
+          <h3>Commercial Refrigeration</h3>
+          <p>Walk-ins, reach-ins, ice machines, food-service equipment — we keep your business cold and running.</p>
+          <ul class="service-features">
+            <li><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>Walk-in coolers &amp; freezers</li>
+            <li><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>Restaurant &amp; ice equipment</li>
+            <li><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>Emergency 24/7 commercial repair</li>
+          </ul>
+          <div class="service-foot">
+            <a href="#contact" class="service-link">Request a quote <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg></a>
+            <div class="service-price">Custom <strong>quoted</strong></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================ PROCESS ================ -->
+<section class="process" id="process">
+  <div class="container">
+    <div class="reveal section-head-center">
+      <span class="section-eyebrow">How it works</span>
+      <h2 class="section-title">A simple, no-pressure process from quote to comfort.</h2>
+      <p class="section-sub">No upsells. No surprises. Just real work, fair prices, and a system that runs the way it's supposed to.</p>
+    </div>
+
+    <div class="process-grid reveal-stagger">
+
+      <div class="process-step">
+        <div class="process-num">01</div>
+        <div class="process-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg></div>
+        <h4>Free phone consult</h4>
+        <p>Tell us what's going on. We'll talk through it and book a visit if needed — at no cost.</p>
+      </div>
+
+      <div class="process-step">
+        <div class="process-num">02</div>
+        <div class="process-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg></div>
+        <h4>Honest diagnosis</h4>
+        <p>We tell you what's wrong, what's not, and what we'd actually do if it were our house.</p>
+      </div>
+
+      <div class="process-step">
+        <div class="process-num">03</div>
+        <div class="process-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63"/></svg></div>
+        <h4>Clean, premium install</h4>
+        <p>Sized properly. Tested twice. Installed exactly the way the manufacturer intended.</p>
+      </div>
+
+      <div class="process-step">
+        <div class="process-num">04</div>
+        <div class="process-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M9 21h6m-3-9a3 3 0 0 0 3-3V5.25a3 3 0 1 0-6 0V9a3 3 0 0 0 3 3Zm-3.75-3a3.75 3.75 0 1 1 7.5 0v.5"/></svg></div>
+        <h4>Ongoing support</h4>
+        <p>Up to 12-year parts warranty, optional maintenance, and a phone line that always picks up.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================ WHY US ================ -->
+<section id="why">
+  <div class="container">
+    <div class="why-grid">
+
+      <div class="reveal">
+        <span class="section-eyebrow">The Air Brothers difference</span>
+        <h2 class="section-title">Two brothers. One promise. Forty years of doing it right.</h2>
+        <p>We're a local, family-owned shop in Ocala. Every install is sized properly, every repair is tested, and every customer gets the same straight answer we'd give our own family. That's how relationships — and HVAC systems — last.</p>
+
+        <div class="why-list">
+
+          <div class="why-feature">
+            <div class="why-feature-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z"/></svg></div>
+            <div>
+              <h4>Local, licensed, and family-owned</h4>
+              <p>Ocala-based since 1985. State-licensed (CAC1823749). We live here, work here, and our reputation is everything.</p>
+            </div>
+          </div>
+
+          <div class="why-feature">
+            <div class="why-feature-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75"/></svg></div>
+            <div>
+              <h4>Honest, transparent pricing</h4>
+              <p>No upsells. No hidden fees. We give you the diagnosis, the options, and the price — clearly, upfront.</p>
+            </div>
+          </div>
+
+          <div class="why-feature">
+            <div class="why-feature-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.32.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .32-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"/></svg></div>
+            <div>
+              <h4>Premium brands, real options</h4>
+              <p>Trane, Daikin, Carrier, Rheem and more. We match the right system to your home, your goals, and your budget.</p>
+            </div>
+          </div>
+
+          <div class="why-feature">
+            <div class="why-feature-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg></div>
+            <div>
+              <h4>24/7 emergency response</h4>
+              <p>AC down on the hottest day of the year? Call us. We'll get to you fast and get you cool again.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="why-art reveal">
+        <img src="images/work-1.jpg" alt="Air Brothers technician at work" class="why-art-photo"/>
+        <div class="why-art-corner-tag">Available now</div>
+        <div class="why-art-bottom-card">
+          <div class="num">40</div>
+          <div>
+            <strong>Years in business</strong>
+            <span>Family-owned since 1985</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================ GALLERY (real work) ================ -->
+<section id="gallery" style="background:var(--bg-soft)">
+  <div class="container">
+    <div class="reveal section-head-center">
+      <span class="section-eyebrow">Our work</span>
+      <h2 class="section-title">Real installs. Real homes. Real Central Florida.</h2>
+      <p class="section-sub">A look at recent projects — from new construction installs to commercial refrigeration jobs.</p>
+    </div>
+
+    <div class="gallery-grid reveal-stagger">
+      <div class="gallery-item tall">
+        <img src="images/work-5.jpg" alt="HVAC outdoor unit install" loading="lazy"/>
+        <div class="gallery-overlay">Outdoor condenser — Ocala East</div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/work-1.jpg" alt="Indoor mini-split install" loading="lazy"/>
+        <div class="gallery-overlay">Daikin mini-split — Belleview</div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/work-3.jpg" alt="AC maintenance" loading="lazy"/>
+        <div class="gallery-overlay">Maintenance tune-up — The Villages</div>
+      </div>
+      <div class="gallery-item wide">
+        <img src="images/work-2.jpg" alt="Repair service for happy customer" loading="lazy"/>
+        <div class="gallery-overlay">Same-day repair — Ocala</div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/work-4.jpg" alt="Outdoor unit service" loading="lazy"/>
+        <div class="gallery-overlay">Outdoor service — Summerfield</div>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:36px">
+      <a href="https://www.facebook.com/airebrothersmechanical" target="_blank" rel="noopener" class="btn btn-ghost">
+        See more on Facebook
+        <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================ ESTIMATOR ================ -->
+<section class="estimator" id="estimate">
+  <div class="container est-grid">
+
+    <div class="est-side reveal">
+      <span class="section-eyebrow">Free estimate</span>
+      <h2>Get a real number<br/>in under 60 seconds.</h2>
+      <p class="section-sub">Three quick questions and we'll give you a realistic starting estimate. Then we'll come confirm it for free.</p>
+      <ul>
+        <li><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>No personal info required to see range</li>
+        <li><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>Free in-home estimate confirms it</li>
+        <li><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>Premium &amp; budget options every time</li>
+      </ul>
+    </div>
+
+    <div class="est-card reveal" id="estCard">
+      <!-- step 1 -->
+      <div class="est-step" data-step="1">
+        <div class="est-step-label">Step 1 of 3 <span class="step-counter">Service type</span></div>
+        <div class="est-question">What do you need help with?</div>
+        <div class="est-options">
+          <button class="est-option" data-value="install" data-cost="3800">
+            <span class="est-option-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5h16.5"/></svg></span>
+            New AC install
+          </button>
+          <button class="est-option" data-value="repair" data-cost="180">
+            <span class="est-option-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877"/></svg></span>
+            AC repair
+          </button>
+          <button class="est-option" data-value="maint" data-cost="149">
+            <span class="est-option-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/></svg></span>
+            Maintenance / tune-up
+          </button>
+          <button class="est-option" data-value="commercial" data-cost="2500">
+            <span class="est-option-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-9-5.25L3 7.5"/></svg></span>
+            Commercial / refrigeration
+          </button>
+        </div>
+        <div class="est-progress">
+          <div class="est-progress-bar active"></div>
+          <div class="est-progress-bar"></div>
+          <div class="est-progress-bar"></div>
+        </div>
+      </div>
+
+      <!-- step 2 -->
+      <div class="est-step" data-step="2" style="display:none">
+        <div class="est-step-label">Step 2 of 3 <span class="step-counter">Property size</span></div>
+        <div class="est-question">How big is the space?</div>
+        <div class="est-options">
+          <button class="est-option" data-value="small" data-mult="0.85">
+            <span class="est-option-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12 12 2.25 21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75"/></svg></span>
+            Under 1,500 sq ft
+          </button>
+          <button class="est-option" data-value="med" data-mult="1">
+            <span class="est-option-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12 12 2.25 21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75"/></svg></span>
+            1,500 — 2,500 sq ft
+          </button>
+          <button class="est-option" data-value="large" data-mult="1.3">
+            <span class="est-option-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18M2.25 9h19.5"/></svg></span>
+            2,500 — 4,000 sq ft
+          </button>
+          <button class="est-option" data-value="xl" data-mult="1.6">
+            <span class="est-option-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12"/></svg></span>
+            4,000+ sq ft / commercial
+          </button>
+        </div>
+        <div class="est-progress">
+          <div class="est-progress-bar active"></div>
+          <div class="est-progress-bar active"></div>
+          <div class="est-progress-bar"></div>
+        </div>
+        <div class="est-nav">
+          <button class="est-back" data-back><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"/></svg> Back</button>
+        </div>
+      </div>
+
+      <!-- step 3 -->
+      <div class="est-step" data-step="3" style="display:none">
+        <div class="est-step-label">Step 3 of 3 <span class="step-counter">Urgency</span></div>
+        <div class="est-question">When do you need it?</div>
+        <div class="est-options">
+          <button class="est-option" data-value="emergency" data-mult="1.15">
+            <span class="est-option-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z"/></svg></span>
+            Emergency / today
+          </button>
+          <button class="est-option" data-value="week" data-mult="1">
+            <span class="est-option-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5"/></svg></span>
+            This week
+          </button>
+          <button class="est-option" data-value="month" data-mult="0.95">
+            <span class="est-option-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5"/></svg></span>
+            Within 30 days
+          </button>
+          <button class="est-option" data-value="planning" data-mult="0.9">
+            <span class="est-option-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg></span>
+            Just planning ahead
+          </button>
+        </div>
+        <div class="est-progress">
+          <div class="est-progress-bar active"></div>
+          <div class="est-progress-bar active"></div>
+          <div class="est-progress-bar active"></div>
+        </div>
+        <div class="est-nav">
+          <button class="est-back" data-back><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"/></svg> Back</button>
+        </div>
+      </div>
+
+      <!-- result -->
+      <div class="est-result" id="estResult">
+        <div class="est-step-label" style="justify-content:center">Your estimated range</div>
+        <div class="price-tag" id="priceTag">$—</div>
+        <div class="price-sub">Real installs vary by brand, scope &amp; site. Free in-home estimate confirms exact pricing.</div>
+        <div class="est-cta-row">
+          <a href="tel:+19548568639" class="btn btn-primary">
+            Call to confirm
+            <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372"/></svg>
+          </a>
+          <a href="#contact" class="btn btn-outline">Email instead</a>
+        </div>
+        <span class="restart-link" id="estRestart">↻ Start over</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================ AREAS ================ -->
+<section id="areas">
+  <div class="container">
+    <div class="areas-grid">
+
+      <div class="reveal">
+        <span class="section-eyebrow">Service area</span>
+        <h2 class="section-title">Proudly serving Ocala &amp; Central Florida.</h2>
+        <p>From the comfort of family homes in Marion County to commercial kitchens across Lake and Sumter — if it cools, heats, or refrigerates, we service it.</p>
+
+        <div class="areas-tags">
+          <a href="#contact" class="area-pill highlight"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg>Ocala (HQ)</a>
+          <a href="#contact" class="area-pill"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/></svg>Belleview</a>
+          <a href="#contact" class="area-pill"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/></svg>Summerfield</a>
+          <a href="#contact" class="area-pill"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/></svg>The Villages</a>
+          <a href="#contact" class="area-pill"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/></svg>Dunnellon</a>
+          <a href="#contact" class="area-pill"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/></svg>Silver Springs</a>
+          <a href="#contact" class="area-pill"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/></svg>Anthony</a>
+          <a href="#contact" class="area-pill"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/></svg>Citra</a>
+          <a href="#contact" class="area-pill"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/></svg>Williston</a>
+          <a href="#contact" class="area-pill"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/></svg>Reddick</a>
+        </div>
+      </div>
+
+      <div class="area-map reveal">
+        <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="rangeG" cx="50%" cy="50%">
+              <stop offset="0%" stop-color="#1E3A8A" stop-opacity="0.16"/>
+              <stop offset="80%" stop-color="#1E3A8A" stop-opacity="0.04"/>
+              <stop offset="100%" stop-color="#1E3A8A" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <!-- coverage circle -->
+          <circle cx="250" cy="250" r="220" fill="url(#rangeG)"/>
+          <circle cx="250" cy="250" r="180" fill="none" stroke="#1E3A8A" stroke-opacity="0.18" stroke-dasharray="4 6"/>
+          <circle cx="250" cy="250" r="110" fill="none" stroke="#1E3A8A" stroke-opacity="0.25" stroke-dasharray="4 6"/>
+
+          <!-- main HQ pin -->
+          <g transform="translate(250,250)">
+            <circle r="20" fill="#1E3A8A" opacity="0.18"/>
+            <circle r="10" fill="#1E3A8A"/>
+            <circle r="4" fill="#fff"/>
+          </g>
+          <text x="250" y="290" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="14" font-weight="700" fill="#1E3A8A">OCALA · HQ</text>
+
+          <!-- satellite pins -->
+          <g class="area-pin">
+            <circle cx="180" cy="180" r="6" fill="#3B82F6"/>
+            <text x="180" y="170" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" font-weight="600" fill="#1E3A8A">Reddick</text>
+          </g>
+          <g class="area-pin">
+            <circle cx="320" cy="200" r="6" fill="#3B82F6"/>
+            <text x="320" y="190" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" font-weight="600" fill="#1E3A8A">Silver Springs</text>
+          </g>
+          <g class="area-pin">
+            <circle cx="290" cy="320" r="6" fill="#3B82F6"/>
+            <text x="290" y="340" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" font-weight="600" fill="#1E3A8A">Belleview</text>
+          </g>
+          <g class="area-pin">
+            <circle cx="350" cy="370" r="6" fill="#3B82F6"/>
+            <text x="350" y="390" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" font-weight="600" fill="#1E3A8A">The Villages</text>
+          </g>
+          <g class="area-pin">
+            <circle cx="160" cy="320" r="6" fill="#3B82F6"/>
+            <text x="160" y="340" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" font-weight="600" fill="#1E3A8A">Dunnellon</text>
+          </g>
+          <g class="area-pin">
+            <circle cx="120" cy="240" r="6" fill="#3B82F6"/>
+            <text x="120" y="230" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" font-weight="600" fill="#1E3A8A">Williston</text>
+          </g>
+          <g class="area-pin">
+            <circle cx="220" cy="370" r="6" fill="#3B82F6"/>
+            <text x="220" y="390" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" font-weight="600" fill="#1E3A8A">Summerfield</text>
+          </g>
+          <g class="area-pin">
+            <circle cx="300" cy="150" r="6" fill="#3B82F6"/>
+            <text x="300" y="140" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" font-weight="600" fill="#1E3A8A">Citra</text>
+          </g>
+          <g class="area-pin">
+            <circle cx="220" cy="160" r="6" fill="#3B82F6"/>
+            <text x="220" y="150" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" font-weight="600" fill="#1E3A8A">Anthony</text>
+          </g>
+        </svg>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================ REVIEWS ================ -->
+<section class="reviews">
+  <div class="container">
+    <div class="reveal section-head-center">
+      <span class="section-eyebrow">★★★★★ Real reviews</span>
+      <h2 class="section-title">Customers don't just like us. They send their neighbors.</h2>
+    </div>
+
+    <div class="reviews-grid reveal-stagger">
+
+      <div class="review-card">
+        <span class="review-quote-mark">"</span>
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        </div>
+        <blockquote>"Great pricing, fast service and Giancarlo really knows his stuff. Diagnosed the issue in minutes and had us cool again the same day. Will absolutely call them again."</blockquote>
+        <div class="review-author">
+          <div class="review-avatar">SR</div>
+          <div>
+            <div class="review-name">Sarah R.</div>
+            <div class="review-loc">Ocala, FL</div>
+          </div>
+          <span class="review-source">Nextdoor</span>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <span class="review-quote-mark">"</span>
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        </div>
+        <blockquote>"Honest, professional and clean work. They installed a new system in our restaurant and the difference in our energy bill was immediate. The team is top tier."</blockquote>
+        <div class="review-author">
+          <div class="review-avatar">MC</div>
+          <div>
+            <div class="review-name">Mike C.</div>
+            <div class="review-loc">Belleview, FL</div>
+          </div>
+          <span class="review-source">Google</span>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <span class="review-quote-mark">"</span>
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        </div>
+        <blockquote>"Walk-in cooler went down at 6am — they were out by 8 and had it running by 10. Saved my whole day. These guys are the real deal."</blockquote>
+        <div class="review-author">
+          <div class="review-avatar">JD</div>
+          <div>
+            <div class="review-name">Jorge D.</div>
+            <div class="review-loc">Summerfield, FL</div>
+          </div>
+          <span class="review-source">Facebook</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================ FAQ ================ -->
+<section id="faq">
+  <div class="container">
+    <div class="faq-grid">
+
+      <div class="faq-side reveal">
+        <span class="section-eyebrow">Common questions</span>
+        <h2 class="section-title">Got questions? We've got answers.</h2>
+        <p>Here are the things we hear most often. Don't see yours? Give us a call — we love a good HVAC question.</p>
+        <a href="tel:+19548568639" class="btn btn-primary">
+          Ask us anything
+          <svg fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372"/></svg>
+        </a>
+      </div>
+
+      <div class="faq-list reveal">
+        <div class="faq-item">
+          <div class="faq-q">
+            How fast can you come out for an emergency?
+            <span class="faq-q-icon"><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/></svg></span>
+          </div>
+          <div class="faq-a"><p>For most of Marion County, we can be at your door within 1–2 hours during business hours, and same-day for emergency calls 24/7. Hottest weeks of the year may be longer — call us first thing.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">
+            Do you give free estimates?
+            <span class="faq-q-icon"><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/></svg></span>
+          </div>
+          <div class="faq-a"><p>Yes — every install or replacement quote is 100% free, no obligation. We come on-site, measure, listen to what you need, and walk you through real options at every budget level.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">
+            How long does a new system install take?
+            <span class="faq-q-icon"><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/></svg></span>
+          </div>
+          <div class="faq-a"><p>Most residential AC and heat pump replacements take a single day. Larger jobs, ductwork changes, or commercial installs can take 2–4 days. We always give you a clear timeline before we start.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">
+            What brands do you install?
+            <span class="faq-q-icon"><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/></svg></span>
+          </div>
+          <div class="faq-a"><p>We install premium brands — Trane, Daikin, Carrier, Rheem and Ruud — and value brands like Goodman and RunTru. We're not tied to any single manufacturer, which means we recommend what's actually best for your home.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">
+            Are you licensed and insured?
+            <span class="faq-q-icon"><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/></svg></span>
+          </div>
+          <div class="faq-a"><p>Fully licensed (FL CAC1823749) and insured. We rank in the top 27% of all licensed contractors in Florida according to BuildZoom.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">
+            Do you offer financing?
+            <span class="faq-q-icon"><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/></svg></span>
+          </div>
+          <div class="faq-a"><p>Yes. We work with several financing partners offering 0% promotional periods and low monthly payment plans on full system replacements. Ask us during your estimate.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">
+            What's covered under your warranty?
+            <span class="faq-q-icon"><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/></svg></span>
+          </div>
+          <div class="faq-a"><p>New installations come with manufacturer warranties up to 12 years on parts (varies by brand). Our workmanship is also backed — if we install it, we stand behind it.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================ FINAL CTA ================ -->
+<section class="cta-final">
+  <div class="container">
+    <h2>Ready for cool, reliable comfort?</h2>
+    <p>Tell us what's going on and we'll have an answer for you fast. Estimates are always free. We're available 24/7 for emergencies.</p>
+    <div class="btn-row">
+      <a href="tel:+19548568639" class="btn btn-white">
+        <svg fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372"/></svg>
+        (954) 856-8639
+      </a>
+      <a href="#contact" class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,0.4)">
+        Send a message
+        <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================ CONTACT ================ -->
+<section id="contact">
+  <div class="container">
+    <div class="reveal section-head-center" style="margin-bottom:48px">
+      <span class="section-eyebrow">Get in touch</span>
+      <h2 class="section-title">Let's get you comfortable.</h2>
+      <p class="section-sub">Call, text, email or send a message — whichever's easiest. We respond fast and we don't waste your time.</p>
+    </div>
+
+    <div class="contact-grid">
+
+      <div class="contact-info reveal">
+        <a href="tel:+19548568639" class="contact-card">
+          <div class="contact-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg></div>
+          <div>
+            <span class="contact-label">Call us</span>
+            <span class="contact-value">(954) 856-8639</span>
+          </div>
+        </a>
+
+        <a href="mailto:airbrosmechanical@gmail.com" class="contact-card">
+          <div class="contact-icon alt"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg></div>
+          <div>
+            <span class="contact-label">Email</span>
+            <span class="contact-value small">airbrosmechanical@gmail.com</span>
+          </div>
+        </a>
+
+        <div class="contact-card">
+          <div class="contact-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg></div>
+          <div>
+            <span class="contact-label">Service area</span>
+            <span class="contact-value">Ocala &amp; Central Florida</span>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon alt"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6l4 2m6-2a10 10 0 1 1-20 0 10 10 0 0 1 20 0Z"/></svg></div>
+          <div>
+            <span class="contact-label">Hours</span>
+            <span class="contact-value">Mon–Sat 7am–7pm · 24/7 emergency</span>
+          </div>
+        </div>
+
+        <a href="https://www.facebook.com/airebrothersmechanical" target="_blank" rel="noopener" class="contact-card">
+          <div class="contact-icon"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073"/></svg></div>
+          <div>
+            <span class="contact-label">Follow us</span>
+            <span class="contact-value">Facebook</span>
+          </div>
+        </a>
+      </div>
+
+      <form class="form reveal" onsubmit="return submitForm(event)">
+        <h3>Send us a message</h3>
+        <p>Tell us about your situation and we'll get back to you within an hour during business hours.</p>
+
+        <div class="field-row">
+          <div class="field"><label for="name">Name</label><input id="name" type="text" required placeholder="Jane Doe"/></div>
+          <div class="field"><label for="phone">Phone</label><input id="phone" type="tel" required placeholder="(352) 555-0123"/></div>
+        </div>
+        <div class="field"><label for="email">Email</label><input id="email" type="email" placeholder="you@email.com"/></div>
+        <div class="field-row">
+          <div class="field">
+            <label for="service">Service needed</label>
+            <select id="service" required>
+              <option value="">Select…</option>
+              <option>HVAC Installation</option>
+              <option>AC Repair</option>
+              <option>Maintenance</option>
+              <option>Commercial Refrigeration</option>
+              <option>Emergency / Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="when">When?</label>
+            <select id="when" required>
+              <option value="">Select…</option>
+              <option>Emergency / Today</option>
+              <option>This week</option>
+              <option>Within 30 days</option>
+              <option>Just planning</option>
+            </select>
+          </div>
+        </div>
+        <div class="field"><label for="message">Tell us more</label><textarea id="message" placeholder="What's going on? Anything helpful…"></textarea></div>
+
+        <button class="btn btn-primary" type="submit">
+          Send message
+          <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5"/></svg>
+        </button>
+        <p class="form-note">
+          <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
+          We respect your time. No spam, ever.
+        </p>
+      </form>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================ FOOTER ================ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+
+      <div>
+        <img src="images/logo-white.png" alt="Air Brothers Mechanical" style="height:54px;width:auto;margin-bottom:24px"/>
+        <div class="footer-about">
+          <p>Locally-owned HVAC and refrigeration experts. Forty years of doing it right for the families and businesses of Ocala and Central Florida.</p>
+          <div class="footer-badges">
+            <span class="footer-badge"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>FL Licensed</span>
+            <span class="footer-badge"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>Insured</span>
+            <span class="footer-badge"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>5★ Rated</span>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h4>Services</h4>
+        <ul class="footer-links">
+          <li><a href="#services">HVAC Installation</a></li>
+          <li><a href="#services">AC &amp; Heat Repair</a></li>
+          <li><a href="#services">Maintenance Plans</a></li>
+          <li><a href="#services">Commercial Refrigeration</a></li>
+          <li><a href="#services">Emergency Service</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Service Areas</h4>
+        <ul class="footer-links">
+          <li>Ocala</li>
+          <li>Belleview</li>
+          <li>The Villages</li>
+          <li>Summerfield</li>
+          <li>Dunnellon</li>
+          <li>Silver Springs</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <ul class="footer-links">
+          <li><a href="tel:+19548568639">(954) 856-8639</a></li>
+          <li><a href="mailto:airbrosmechanical@gmail.com">airbrosmechanical@gmail.com</a></li>
+          <li>Mon–Sat 7am–7pm</li>
+          <li>24/7 Emergency Service</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Air Brothers Mechanical LLC · License CAC1823749</span>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/airebrothersmechanical" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073"/></svg>
+        </a>
+        <a href="tel:+19548568639" aria-label="Phone">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg>
+        </a>
+        <a href="mailto:airbrosmechanical@gmail.com" aria-label="Email">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ================ MOBILE STICKY CTA ================ -->
+<div class="mobile-cta-bar">
+  <a href="tel:+19548568639" class="btn btn-primary">
+    <svg fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372"/></svg>
+    Call now
+  </a>
+  <a href="#estimate" class="btn btn-outline">Free quote</a>
+</div>
+
+<!-- ================ FUTURISTIC ORB ================ -->
+<div class="orb-wrap" id="orb">
+  <div class="orb-aura"></div>
+  <div class="orb-halo"></div>
+
+  <!-- Quick action menu (revealed on click) -->
+  <div class="orb-menu">
+    <a href="tel:+19548568639" class="orb-action" data-label="Call us" style="--tx:0px;--ty:-100px">
+      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg>
+    </a>
+    <a href="#estimate" class="orb-action" data-label="Free estimate" style="--tx:-50px;--ty:-86px">
+      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
+    </a>
+    <a href="mailto:airbrosmechanical@gmail.com" class="orb-action" data-label="Email us" style="--tx:-86px;--ty:-50px">
+      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg>
+    </a>
+    <a href="#contact" class="orb-action" data-label="Send message" style="--tx:-100px;--ty:0px">
+      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.76c0 1.6 1.123 2.994 2.707 3.227 1.068.157 2.148.279 3.238.364.466.037.893.281 1.153.671L12 21l2.652-3.978c.26-.39.687-.634 1.153-.67 1.09-.086 2.17-.208 3.238-.365 1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z"/></svg>
+    </a>
+  </div>
+
+  <!-- Main orb button -->
+  <button class="orb-btn" id="orbBtn" aria-label="Quick contact">
+    <span class="orb-plasma"></span>
+    <span class="orb-streaks"></span>
+    <span class="orb-particle" style="left:24%;top:30%;width:2px;height:2px;animation:orbParticleFire 2.4s ease-in-out 0.2s infinite"></span>
+    <span class="orb-particle" style="left:68%;top:24%;width:1.5px;height:1.5px;animation:orbParticleFire 3.2s ease-in-out 0.8s infinite"></span>
+    <span class="orb-particle" style="left:78%;top:62%;width:2.5px;height:2.5px;animation:orbParticleFire 2.8s ease-in-out 1.4s infinite"></span>
+    <span class="orb-particle" style="left:30%;top:74%;width:1.8px;height:1.8px;animation:orbParticleFire 3s ease-in-out 0.5s infinite"></span>
+    <span class="orb-particle" style="left:18%;top:54%;width:1.4px;height:1.4px;animation:orbParticleFire 2.6s ease-in-out 1.8s infinite"></span>
+    <span class="orb-particle" style="left:54%;top:18%;width:2px;height:2px;animation:orbParticleFire 3.4s ease-in-out 1.1s infinite"></span>
+    <span class="orb-particle" style="left:82%;top:42%;width:1.6px;height:1.6px;animation:orbParticleFire 2.2s ease-in-out 0.3s infinite"></span>
+    <span class="orb-particle" style="left:42%;top:84%;width:1.8px;height:1.8px;animation:orbParticleFire 3.6s ease-in-out 1.6s infinite"></span>
+    <span class="orb-highlight"></span>
+    <span class="orb-reflection"></span>
+    <span class="orb-iris">
+      <span class="orb-iris-ring"></span>
+      <span class="orb-iris-ring-inner"></span>
+      <span class="orb-pupil"></span>
+    </span>
+    <span class="orb-close-icon">
+      <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/></svg>
+    </span>
+  </button>
+
+  <span class="orb-label">Quick contact</span>
+</div>
+
+<!-- ================ JS ================ -->
+<script>
+// year
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// nav scroll + scroll progress bar
+const nav = document.getElementById('nav');
+const progress = document.getElementById('scrollProgress');
+let scrollRaf = 0;
+function onScroll(){
+  if(scrollRaf) return;
+  scrollRaf = requestAnimationFrame(()=>{
+    scrollRaf = 0;
+    const y = window.scrollY;
+    if(y > 30) nav.classList.add('scrolled'); else nav.classList.remove('scrolled');
+    const max = (document.documentElement.scrollHeight - window.innerHeight) || 1;
+    progress.style.width = Math.min(100, (y / max) * 100) + '%';
+  });
+}
+window.addEventListener('scroll', onScroll, {passive:true});
+
+// Cursor glow follow (desktop only)
+if(window.matchMedia('(hover: hover)').matches){
+  const glow = document.getElementById('cursorGlow');
+  let glowRaf = 0;
+  let glowActive = false;
+  document.addEventListener('mousemove', (e)=>{
+    if(!glowActive){ glow.classList.add('active'); glowActive = true; }
+    if(glowRaf) return;
+    glowRaf = requestAnimationFrame(()=>{
+      glowRaf = 0;
+      glow.style.transform = `translate(${e.clientX}px, ${e.clientY}px) translate(-50%,-50%)`;
+    });
+  });
+}
+
+// Hero card 3D parallax — tilt with mouse
+(function heroParallax(){
+  const card = document.querySelector('.hero-card');
+  const wrap = document.querySelector('.hero-visual');
+  if(!card || !wrap || !window.matchMedia('(hover: hover)').matches) return;
+  let raf = 0;
+  function onMove(e){
+    if(raf) return;
+    raf = requestAnimationFrame(()=>{
+      raf = 0;
+      const r = wrap.getBoundingClientRect();
+      const x = (e.clientX - r.left) / r.width - 0.5;
+      const y = (e.clientY - r.top) / r.height - 0.5;
+      const ry = x * 8;   // rotateY range
+      const rx = -y * 8;  // rotateX range
+      card.style.setProperty('--rx', rx + 'deg');
+      card.style.setProperty('--ry', ry + 'deg');
+      card.style.setProperty('--tx', (x * 6) + 'px');
+      card.style.setProperty('--ty', (y * 6) + 'px');
+    });
+  }
+  function reset(){
+    card.style.setProperty('--rx', '0deg');
+    card.style.setProperty('--ry', '0deg');
+    card.style.setProperty('--tx', '0px');
+    card.style.setProperty('--ty', '0px');
+  }
+  wrap.addEventListener('mousemove', onMove);
+  wrap.addEventListener('mouseleave', reset);
+})();
+
+// Service card 3D tilt on hover
+(function serviceCardTilt(){
+  if(!window.matchMedia('(hover: hover)').matches) return;
+  document.querySelectorAll('.service-card').forEach(card=>{
+    let raf = 0;
+    card.addEventListener('mousemove', (e)=>{
+      if(raf) return;
+      raf = requestAnimationFrame(()=>{
+        raf = 0;
+        const r = card.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width - 0.5;
+        const y = (e.clientY - r.top) / r.height - 0.5;
+        card.style.transform = `translateY(-8px) rotateX(${-y*4}deg) rotateY(${x*4}deg)`;
+      });
+    });
+    card.addEventListener('mouseleave', ()=>{
+      card.style.transform = '';
+    });
+  });
+})();
+
+// Magnetic effect on primary buttons
+(function magneticButtons(){
+  if(!window.matchMedia('(hover: hover)').matches) return;
+  document.querySelectorAll('.btn-primary, .nav-cta').forEach(btn=>{
+    let raf = 0;
+    btn.addEventListener('mousemove', (e)=>{
+      if(raf) return;
+      raf = requestAnimationFrame(()=>{
+        raf = 0;
+        const r = btn.getBoundingClientRect();
+        const x = (e.clientX - r.left - r.width/2) * 0.25;
+        const y = (e.clientY - r.top - r.height/2) * 0.25;
+        btn.style.transform = `translate(${x}px, ${y}px)`;
+      });
+    });
+    btn.addEventListener('mouseleave', ()=>{
+      btn.style.transform = '';
+    });
+  });
+})();
+
+// Futuristic orb — show after small delay, toggle quick actions on click
+const orb = document.getElementById('orb');
+const orbBtn = document.getElementById('orbBtn');
+setTimeout(() => orb.classList.add('visible'), 1000);
+// Cycle a "Quick contact" label hint a few times so people notice it
+let labelCycle = 0;
+const labelInterval = setInterval(() => {
+  if(orb.classList.contains('open')) return;
+  orb.classList.add('show-label');
+  setTimeout(() => orb.classList.remove('show-label'), 2800);
+  labelCycle++;
+  if(labelCycle >= 4) clearInterval(labelInterval);
+}, 9000);
+setTimeout(() => { orb.classList.add('show-label'); setTimeout(()=>orb.classList.remove('show-label'), 2800); }, 2200);
+
+orbBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  orb.classList.toggle('open');
+});
+// Close when clicking elsewhere
+document.addEventListener('click', (e) => {
+  if(orb.classList.contains('open') && !orb.contains(e.target)) orb.classList.remove('open');
+});
+// Close after picking an action (so the menu doesn't linger)
+orb.querySelectorAll('.orb-action').forEach(a => a.addEventListener('click', () => {
+  setTimeout(()=> orb.classList.remove('open'), 200);
+}));
+
+// mobile menu
+const menuToggle = document.getElementById('menuToggle');
+const menuDrawer = document.getElementById('menuDrawer');
+const menuClose = document.getElementById('menuClose');
+menuToggle.addEventListener('click', () => menuDrawer.classList.add('open'));
+menuClose.addEventListener('click', () => menuDrawer.classList.remove('open'));
+menuDrawer.addEventListener('click', (e) => { if(e.target === menuDrawer) menuDrawer.classList.remove('open') });
+document.querySelectorAll('.menu-link').forEach(a => a.addEventListener('click', () => menuDrawer.classList.remove('open')));
+
+// reveal observer
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if(e.isIntersecting) {
+      e.target.classList.add('visible');
+      // stat counter
+      e.target.querySelectorAll('[data-count]').forEach(el => {
+        if(el.dataset.counted) return;
+        el.dataset.counted = '1';
+        const target = parseInt(el.dataset.count);
+        const suffix = el.dataset.suffix || '';
+        const dur = 1600;
+        const start = performance.now();
+        function step(now) {
+          const t = Math.min((now - start) / dur, 1);
+          const eased = 1 - Math.pow(1 - t, 3);
+          el.textContent = Math.floor(eased * target) + (t === 1 ? suffix : '');
+          if(t < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      });
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => io.observe(el));
+
+// FAQ accordion
+document.querySelectorAll('.faq-item').forEach(item => {
+  item.querySelector('.faq-q').addEventListener('click', () => {
+    const open = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+    if(!open) item.classList.add('open');
+  });
+});
+
+// Estimator
+(function() {
+  const card = document.getElementById('estCard');
+  const result = document.getElementById('estResult');
+  const priceTag = document.getElementById('priceTag');
+  const restart = document.getElementById('estRestart');
+  const steps = card.querySelectorAll('.est-step');
+  let currentStep = 1;
+  const answers = { cost: 0, mult1: 1, mult2: 1 };
+
+  function showStep(n) {
+    steps.forEach(s => s.style.display = (parseInt(s.dataset.step) === n) ? 'block' : 'none');
+    result.classList.remove('active');
+  }
+
+  function showResult() {
+    steps.forEach(s => s.style.display = 'none');
+    result.classList.add('active');
+    const base = answers.cost * answers.mult1 * answers.mult2;
+    const lo = Math.round(base * 0.85 / 50) * 50;
+    const hi = Math.round(base * 1.25 / 50) * 50;
+    priceTag.textContent = `$${lo.toLocaleString()} – $${hi.toLocaleString()}`;
+  }
+
+  card.querySelectorAll('.est-option').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const step = btn.closest('.est-step');
+      step.querySelectorAll('.est-option').forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+
+      if(currentStep === 1) {
+        answers.cost = parseInt(btn.dataset.cost);
+        currentStep = 2;
+        setTimeout(() => showStep(2), 300);
+      } else if(currentStep === 2) {
+        answers.mult1 = parseFloat(btn.dataset.mult);
+        currentStep = 3;
+        setTimeout(() => showStep(3), 300);
+      } else if(currentStep === 3) {
+        answers.mult2 = parseFloat(btn.dataset.mult);
+        setTimeout(showResult, 350);
+      }
+    });
+  });
+
+  card.querySelectorAll('[data-back]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      currentStep = Math.max(1, currentStep - 1);
+      showStep(currentStep);
+    });
+  });
+
+  restart.addEventListener('click', () => {
+    currentStep = 1;
+    card.querySelectorAll('.est-option.selected').forEach(b => b.classList.remove('selected'));
+    showStep(1);
+  });
+})();
+
+// Form
+function submitForm(e) {
+  e.preventDefault();
+  const btn = e.target.querySelector('button[type="submit"]');
+  const original = btn.innerHTML;
+  btn.innerHTML = 'Sending…';
+  btn.disabled = true;
+  setTimeout(() => {
+    btn.innerHTML = '✓ Message sent — we\'ll be in touch';
+    setTimeout(() => {
+      btn.innerHTML = original;
+      btn.disabled = false;
+      e.target.reset();
+    }, 2500);
+  }, 800);
+  return false;
+}
+</script>
+
+</body>
+</html>
